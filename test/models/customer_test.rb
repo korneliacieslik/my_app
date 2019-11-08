@@ -30,7 +30,6 @@ class CustomerTest < ActiveSupport::TestCase
 	end
 
 	test "email validation should accept email addresses" do 
-		# %w creates an array of strings and uses whitespace to separate each value
 		valid_emailes = %w[MY-EAMIL@EXAMPLE.com myemail@example.com my_email@example.COM
 							Myeamil@example.com my.email@example.com.fo ]
 
