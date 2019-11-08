@@ -2,4 +2,10 @@ Rails.application.routes.draw do
   get 'static_pages/home'
   get 'static_pages/contact'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  
+  # The routes file is responsible for implementing the router that defines the correspondence between 
+  # URLs and web pages. 
+
+  get 'static_pages/home'
+  get 'static_pages/contact'
 end

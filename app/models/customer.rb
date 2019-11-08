@@ -1,7 +1,6 @@
-class Customer < ApplicationRecord
-	# validate :name, :presence => true 
+class Customer < ApplicationRecord 
 	validates :name, presence: true
-	validates :email, presence: true, uniqueness: true, 
-			  # :format {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
-			  format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
+	validates :email, presence: true,
+					  uniqueness: true, 
+			  		  format: {with: /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i}
 end
