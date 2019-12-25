@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
-  # The routes file is responsible for implementing the router that defines the correspondence between 
-  # URLs and web pages. 
+  resources :customers
   root 'static_pages#home'
   get 'static_pages/home'
   get 'static_pages/contact'
