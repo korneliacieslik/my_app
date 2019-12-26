@@ -5,6 +5,7 @@ ruby '2.5.1'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '6.0.0'
+gem 'bootstrap-sass', '3.4.1'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
@@ -29,10 +30,6 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
-
-  # sqlite3 gem included only in a development or test environment prevents potential
-  # conflict with the database used by Heroku. 
-  # Use sqlite3 as the database for Active Record
   gem 'sqlite3', '~> 1.4'
 end
 
@@ -54,6 +51,7 @@ group :test do
 end
 
 group :production do 
+  # Adds pg gem to allow Rails to talk to PostgreSQL db used by Heroku. 
   gem 'pg', '1.1.4'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
