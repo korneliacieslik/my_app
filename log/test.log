@@ -6786,3 +6786,1025 @@ Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.0ms | Allocations: 913
 [Webpacker] Everything's up-to-date. Nothing to do
 Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 9131)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (31.2ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (37.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (29.6ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (38.7ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:41:46.108743', '2020-01-04 19:41:46.108743');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:41:46.108743', '2020-01-04 19:41:46.108743');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:41:46.110847', '2020-01-04 19:41:46.110847');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:41:46.110847', '2020-01-04 19:41:46.110847');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:41:46.111756', '2020-01-04 19:41:46.111756');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:41:46.111756', '2020-01-04 19:41:46.111756')[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:41:46.108728', '2020-01-04 19:41:46.108728');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:41:46.108728', '2020-01-04 19:41:46.108728');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:41:46.110847', '2020-01-04 19:41:46.110847');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:41:46.110847', '2020-01-04 19:41:46.110847');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:41:46.111779', '2020-01-04 19:41:46.111779');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:41:46.111779', '2020-01-04 19:41:46.111779')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:41:46.110369', '2020-01-04 19:41:46.110369');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:41:46.110369', '2020-01-04 19:41:46.110369');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:41:46.115149', '2020-01-04 19:41:46.115149');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:41:46.115149', '2020-01-04 19:41:46.115149');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:41:46.116517', '2020-01-04 19:41:46.116517');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:41:46.116517', '2020-01-04 19:41:46.116517')[0m
+  [1m[35m (10.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:41:46.119571', '2020-01-04 19:41:46.119571');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:41:46.119571', '2020-01-04 19:41:46.119571');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:41:46.124946', '2020-01-04 19:41:46.124946');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:41:46.124946', '2020-01-04 19:41:46.124946');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:41:46.126161', '2020-01-04 19:41:46.126161');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:41:46.126161', '2020-01-04 19:41:46.126161')[0m
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[35m (13.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[35m (14.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started PATCH "/products/980190962" for 127.0.0.1 at 2020-01-04 20:41:46 +0100
+Started DELETE "/products/980190962" for 127.0.0.1 at 2020-01-04 20:41:46 +0100
+Started GET "/products/980190962" for 127.0.0.1 at 2020-01-04 20:41:46 +0100
+Started POST "/products" for 127.0.0.1 at 2020-01-04 20:41:46 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}, "id"=>"980190962"}
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (2.8ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 14ms (ActiveRecord: 3.0ms | Allocations: 895)
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 6.0ms | Allocations: 571)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (1.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/new" for 127.0.0.1 at 2020-01-04 20:41:46 +0100
+Processing by ProductsController#new as HTML
+  Rendering products/edit.html.erb within layouts/application
+  Rendering products/new.html.erb within layouts/application
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 18.9ms | Allocations: 3152)
+  Rendered products/new.html.erb within layouts/application (Duration: 27.2ms | Allocations: 3764)
+  Rendered products/_form.html.erb (Duration: 20.1ms | Allocations: 2343)
+  Rendered products/edit.html.erb within layouts/application (Duration: 35.3ms | Allocations: 3007)
+  Rendered products/_form.html.erb (Duration: 26.2ms | Allocations: 2281)
+  Rendered products/new.html.erb within layouts/application (Duration: 27.9ms | Allocations: 2894)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 100)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 8311ms (Views: 8274.9ms | ActiveRecord: 0.1ms | Allocations: 3865656)
+Completed 200 OK in 8318ms (Views: 8304.0ms | ActiveRecord: 0.1ms | Allocations: 3861223)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Started GET "/products" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by ProductsController#index as HTML
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/index.html.erb within layouts/application
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendering products/edit.html.erb within layouts/application
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+Completed 200 OK in 8317ms (Views: 8280.5ms | ActiveRecord: 0.0ms | Allocations: 3865356)
+  Rendered products/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 703)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+OrdersControllerTest: test_should_show_order
+--------------------------------------------
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered products/_form.html.erb (Duration: 8.8ms | Allocations: 3185)
+  Rendered products/edit.html.erb within layouts/application (Duration: 9.8ms | Allocations: 3578)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 12.6ms | ActiveRecord: 0.2ms | Allocations: 9427)
+Started GET "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+OrdersControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/orders/980190962/edit" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 1.5ms | Allocations: 232)
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.1ms | Allocations: 12389)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+OrdersControllerTest: test_should_create_order
+----------------------------------------------
+  Rendered orders/_form.html.erb (Duration: 3.0ms | Allocations: 659)
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered orders/edit.html.erb within layouts/application (Duration: 4.9ms | Allocations: 1045)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 25)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.1ms | Allocations: 9669)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+OrdersControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/orders" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.1ms | Allocations: 10458)
+Started POST "/orders" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Processing by OrdersController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering orders/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+OrdersControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+Started GET "/orders/new" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  Rendered orders/index.html.erb within layouts/application (Duration: 2.9ms | Allocations: 695)
+Processing by OrdersController#create as HTML
+Processing by OrdersController#new as HTML
+  Rendering orders/new.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 0.8ms | Allocations: 320)
+  Rendered orders/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 523)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendering orders/new.html.erb within layouts/application
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms | Allocations: 9413)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered orders/_form.html.erb (Duration: 1.8ms | Allocations: 745)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1082)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+-----------------------------------------------
+OrdersControllerTest: test_should_destroy_order
+-----------------------------------------------
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 9251)
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+OrdersControllerTest: test_should_update_order
+----------------------------------------------
+Started DELETE "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Processing by OrdersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by OrdersController#update as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Destroy (0.8ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/orders
+Completed 302 Found in 3ms (ActiveRecord: 1.1ms | Allocations: 626)
+  Rendering orders/edit.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered orders/_form.html.erb (Duration: 1.1ms | Allocations: 497)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered orders/edit.html.erb within layouts/application (Duration: 1.4ms | Allocations: 606)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+Completed 200 OK in 24ms (Views: 15.0ms | ActiveRecord: 0.0ms | Allocations: 12708)
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CustomersControllerTest: test_should_destroy_customer
+-----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CustomersControllerTest: test_should_update_customer
+----------------------------------------------------
+  [1m[36mCustomer Load (0.5ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.4ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 24)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Started DELETE "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.1ms | Allocations: 9929)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+CustomersControllerTest: test_should_get_new
+--------------------------------------------
+Processing by CustomersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Destroy (0.6ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/customers
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms | Allocations: 754)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+Processing by CustomersController#update as HTML
+  Parameters: {"customer"=>{"email"=>"MyString", "name"=>"MyString"}, "id"=>"980190962"}
+Started GET "/customers/new" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+CustomersControllerTest: test_should_show_customer
+--------------------------------------------------
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Processing by CustomersController#new as HTML
+Redirected to http://www.example.com/customers/980190962
+Completed 302 Found in 8ms (ActiveRecord: 0.1ms | Allocations: 1137)
+Processing by CustomersController#show as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Parameters: {"id"=>"980190962"}
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CustomersControllerTest: test_should_get_edit
+---------------------------------------------
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered customers/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 279)
+Started GET "/customers/980190962/edit" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  Rendered customers/_form.html.erb (Duration: 4.7ms | Allocations: 1157)
+  Rendered customers/new.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1494)
+[Webpacker] Everything's up-to-date. Nothing to do
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 25)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Completed 200 OK in 21ms (Views: 19.4ms | ActiveRecord: 0.0ms | Allocations: 10709)
+Completed 200 OK in 18ms (Views: 16.0ms | ActiveRecord: 0.2ms | Allocations: 9528)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering customers/edit.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CustomersControllerTest: test_should_create_customer
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CustomersControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+Started GET "/customers" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Started POST "/customers" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+  Rendered customers/_form.html.erb (Duration: 3.2ms | Allocations: 1145)
+  Rendered customers/edit.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1531)
+Processing by CustomersController#index as HTML
+Processing by CustomersController#create as HTML
+  Parameters: {"customer"=>{"email"=>"MyString", "name"=>"MyString"}}
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 690)
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Create (0.8ms)[0m  [1m[32mINSERT INTO "customers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "MyString"], ["email", "MyString"], ["created_at", "2020-01-04 19:41:54.779245"], ["updated_at", "2020-01-04 19:41:54.779245"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/customers/980190963
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms | Allocations: 1138)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 9408)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 23.5ms | ActiveRecord: 0.2ms | Allocations: 10776)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_root
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-01-04 20:41:54 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 99)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 145)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 12271)
+  [1m[35m (2.6ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_footer.html.erb (Duration: 12.9ms | Allocations: 94)
+Completed 200 OK in 8465ms (Views: 8460.0ms | ActiveRecord: 0.0ms | Allocations: 3862656)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (37.9ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (43.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (42.9ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (41.8ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:44:03.033459', '2020-01-04 19:44:03.033459');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:44:03.033459', '2020-01-04 19:44:03.033459');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:44:03.035565', '2020-01-04 19:44:03.035565');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:44:03.035565', '2020-01-04 19:44:03.035565');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:44:03.036591', '2020-01-04 19:44:03.036591');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:44:03.036591', '2020-01-04 19:44:03.036591')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (3.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:44:03.038353', '2020-01-04 19:44:03.038353');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:44:03.038353', '2020-01-04 19:44:03.038353');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:44:03.040742', '2020-01-04 19:44:03.040742');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:44:03.040742', '2020-01-04 19:44:03.040742');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:44:03.041745', '2020-01-04 19:44:03.041745');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:44:03.041745', '2020-01-04 19:44:03.041745')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:44:03.040921', '2020-01-04 19:44:03.040921');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:44:03.040921', '2020-01-04 19:44:03.040921');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:44:03.043763', '2020-01-04 19:44:03.043763');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:44:03.043763', '2020-01-04 19:44:03.043763');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:44:03.045353', '2020-01-04 19:44:03.045353');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:44:03.045353', '2020-01-04 19:44:03.045353')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "customers";
+DELETE FROM "orders";
+DELETE FROM "products";
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (980190962, 'MyString', 'MyString', '2020-01-04 19:44:03.044475', '2020-01-04 19:44:03.044475');
+INSERT INTO "customers" ("id", "name", "email", "created_at", "updated_at") VALUES (298486374, 'MyString', 'MyString', '2020-01-04 19:44:03.044475', '2020-01-04 19:44:03.044475');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-01-04 19:44:03.047632', '2020-01-04 19:44:03.047632');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-01-04 19:44:03.047632', '2020-01-04 19:44:03.047632');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-01-04 19:44:03.048773', '2020-01-04 19:44:03.048773');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-01-04 19:44:03.048773', '2020-01-04 19:44:03.048773')[0m
+  [1m[35m (3.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/new" for 127.0.0.1 at 2020-01-04 20:44:03 +0100
+Started PATCH "/products/980190962" for 127.0.0.1 at 2020-01-04 20:44:03 +0100
+Processing by ProductsController#new as HTML
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2020-01-04 20:44:03 +0100
+Started GET "/products" for 127.0.0.1 at 2020-01-04 20:44:03 +0100
+  Rendering products/new.html.erb within layouts/application
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  Rendered products/_form.html.erb (Duration: 6.2ms | Allocations: 3170)
+  Rendered products/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 3786)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}, "id"=>"980190962"}
+Processing by ProductsController#index as HTML
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 6.6ms | Allocations: 3208)
+  Rendered products/edit.html.erb within layouts/application (Duration: 8.1ms | Allocations: 3875)
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (12.0ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1059)
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 5.4ms | Allocations: 2343)
+  Rendered products/edit.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3007)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 100)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 1063ms (Views: 1043.3ms | ActiveRecord: 12.0ms | Allocations: 1453473)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/products" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}}
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 4.8ms | Allocations: 2260)
+  Rendered products/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2604)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 16.8ms | ActiveRecord: 0.0ms | Allocations: 14730)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 277)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 1144ms (Views: 1136.6ms | ActiveRecord: 0.0ms | Allocations: 1456201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.1ms | Allocations: 9201)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+OrdersControllerTest: test_should_create_order
+----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started DELETE "/products/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+Started POST "/orders" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by OrdersController#create as HTML
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 760)
+  Rendering orders/new.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendered orders/_form.html.erb (Duration: 1.6ms | Allocations: 725)
+  Rendered orders/new.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1062)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------
+OrdersControllerTest: test_should_get_new
+-----------------------------------------
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/orders/new" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by OrdersController#new as HTML
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.0ms | Allocations: 10980)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  Rendering orders/new.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+OrdersControllerTest: test_should_get_edit
+------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered orders/_form.html.erb (Duration: 2.3ms | Allocations: 629)
+  Rendered orders/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 966)
+Started GET "/orders/980190962/edit" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Processing by OrdersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering orders/edit.html.erb within layouts/application
+  Rendered orders/_form.html.erb (Duration: 1.0ms | Allocations: 351)
+  Rendered orders/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 603)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 94)
+Completed 200 OK in 1171ms (Views: 1144.9ms | ActiveRecord: 0.1ms | Allocations: 1459079)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.0ms | Allocations: 10179)
+  [1m[35m (0.5ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+OrdersControllerTest: test_should_update_order
+----------------------------------------------
+-----------------------------------------------
+OrdersControllerTest: test_should_destroy_order
+-----------------------------------------------
+  [1m[36mOrder Load (0.3ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+Started DELETE "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Started PATCH "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+Processing by OrdersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 22.0ms | ActiveRecord: 0.2ms | Allocations: 9517)
+Processing by OrdersController#update as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mOrder Destroy (0.3ms)[0m  [1m[31mDELETE FROM "orders" WHERE "orders"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/orders
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms | Allocations: 691)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+OrdersControllerTest: test_should_get_index
+-------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "orders"[0m
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/orders" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+--------------------------------------------
+OrdersControllerTest: test_should_show_order
+--------------------------------------------
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/orders/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  Rendering orders/edit.html.erb within layouts/application
+Processing by OrdersController#index as HTML
+Processing by OrdersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  Rendered orders/_form.html.erb (Duration: 1.5ms | Allocations: 780)
+  Rendered orders/edit.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1166)
+  [1m[36mOrder Load (0.1ms)[0m  [1m[34mSELECT "orders".* FROM "orders" WHERE "orders"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering orders/index.html.erb within layouts/application
+  Rendering orders/show.html.erb within layouts/application
+  Rendered orders/show.html.erb within layouts/application (Duration: 0.6ms | Allocations: 229)
+  [1m[36mOrder Load (0.2ms)[0m  [1m[34mSELECT "orders".* FROM "orders"[0m
+  Rendered orders/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 636)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 14.0ms | ActiveRecord: 0.1ms | Allocations: 11289)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 14ms (Views: 12.5ms | ActiveRecord: 0.1ms | Allocations: 9041)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CustomersControllerTest: test_should_update_customer
+----------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------
+CustomersControllerTest: test_should_create_customer
+----------------------------------------------------
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 25ms (Views: 23.3ms | ActiveRecord: 0.2ms | Allocations: 9348)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[35m (0.8ms)[0m  [1m[31mrollback transaction[0m
+Started POST "/customers" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+CustomersControllerTest: test_should_get_edit
+---------------------------------------------
+Started PATCH "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  [1m[36mCustomer Load (1.0ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by CustomersController#create as HTML
+  Parameters: {"customer"=>{"email"=>"MyString", "name"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+Processing by CustomersController#update as HTML
+  [1m[36mCustomer Create (0.5ms)[0m  [1m[32mINSERT INTO "customers" ("name", "email", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "MyString"], ["email", "MyString"], ["created_at", "2020-01-04 19:44:04.380538"], ["updated_at", "2020-01-04 19:44:04.380538"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+  Parameters: {"customer"=>{"email"=>"MyString", "name"=>"MyString"}, "id"=>"980190962"}
+Redirected to http://www.example.com/customers/980190963
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms | Allocations: 1281)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/customers/980190962/edit" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+Redirected to http://www.example.com/customers/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 1128)
+  [1m[36mCustomer Load (0.3ms)[0m  [1m[34mSELECT "customers".* FROM "customers" ORDER BY "customers"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Processing by CustomersController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------
+CustomersControllerTest: test_should_get_index
+----------------------------------------------
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+CustomersControllerTest: test_should_show_customer
+--------------------------------------------------
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering customers/edit.html.erb within layouts/application
+Started GET "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Started GET "/customers" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+Processing by CustomersController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Processing by CustomersController#index as HTML
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered customers/_form.html.erb (Duration: 4.4ms | Allocations: 1199)
+  Rendered customers/edit.html.erb within layouts/application (Duration: 6.4ms | Allocations: 1585)
+  Rendering customers/index.html.erb within layouts/application
+  Rendering customers/show.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  Rendered customers/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 700)
+  Rendered customers/show.html.erb within layouts/application (Duration: 3.1ms | Allocations: 279)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 33ms (Views: 30.5ms | ActiveRecord: 0.1ms | Allocations: 11001)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------
+CustomersControllerTest: test_should_destroy_customer
+-----------------------------------------------------
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 29ms (Views: 26.5ms | ActiveRecord: 0.2ms | Allocations: 9859)
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+Started DELETE "/customers/980190962" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Completed 200 OK in 33ms (Views: 28.6ms | ActiveRecord: 0.1ms | Allocations: 9539)
+--------------------------------------------
+CustomersControllerTest: test_should_get_new
+--------------------------------------------
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by CustomersController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/customers/new" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  [1m[36mCustomer Load (0.1ms)[0m  [1m[34mSELECT "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mCustomer Destroy (0.3ms)[0m  [1m[31mDELETE FROM "customers" WHERE "customers"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/customers
+Completed 302 Found in 3ms (ActiveRecord: 0.5ms | Allocations: 629)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_root
+-----------------------------------------------
+Processing by CustomersController#new as HTML
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "customers"[0m
+  Rendering customers/new.html.erb within layouts/application
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+Started GET "/" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+  Rendered customers/_form.html.erb (Duration: 5.3ms | Allocations: 1104)
+Processing by StaticPagesController#home as HTML
+  Rendered customers/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1441)
+  Rendering static_pages/home.html.erb within layouts/application
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 1.0ms | Allocations: 145)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.8ms | Allocations: 3197)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 99)
+  Rendered layouts/_header.html.erb (Duration: 0.4ms | Allocations: 145)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 1315ms (Views: 1306.9ms | ActiveRecord: 0.1ms | Allocations: 1456491)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-01-04 20:44:04 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 21ms (Views: 20.1ms | ActiveRecord: 0.0ms | Allocations: 12271)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 47)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 9358)
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 25)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 40ms (Views: 38.7ms | ActiveRecord: 0.0ms | Allocations: 10157)
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.6ms | Allocations: 3197)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.1ms | Allocations: 26)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms | Allocations: 12271)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
