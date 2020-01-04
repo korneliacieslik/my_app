@@ -1,25 +1,25 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%=yield(:title)%> | Healthy bowl</title>
+    <title><%=full_title(yield(:title))%></title>
+    
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--
+    The effect of this line is to look for a file called app/views/layouts/_shim.html.erb, evaluate its contents, and insert the results into the view.
+    -->
+    <%= render 'layouts/shim' %>
   </head>
 
   <body>
-    <header>
-      <div class="cointainer">
-        <div class="btn-group">
-          <button type="button", class="nav-button btn-link">Home</button>
-          <button type="button", class="nav-button btn-link">Contact</button>
-          <button type="button", class="nav-button btn-link">Opinions</button>
-          <button type="button", class="nav-button btn-link">Your account</button>
-        </div>  
-      </div>
-    </header>
+    <!--
+    The effect of this line is to look for a file called app/views/layouts/_header.html.erb, evaluate its contents, and insert the results into the view.
+    -->
+    <%= render 'layouts/header' %>
     <%= yield %>
+    <%= render 'layouts/footer' %>
   </body>
 </html>
