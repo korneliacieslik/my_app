@@ -4247,3 +4247,507 @@ Processing by StaticPagesController#opinions as HTML
 Completed 200 OK in 26ms (Views: 24.7ms | ActiveRecord: 0.0ms | Allocations: 20046)
 
 
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:12:37 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.2ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 24.4ms | ActiveRecord: 0.0ms | Allocations: 18174)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:12:41 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 88)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 22ms (Views: 21.8ms | ActiveRecord: 0.0ms | Allocations: 18161)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:14:31 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 239)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms | Allocations: 20052)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:16:30 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.4ms | Allocations: 146)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 239)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 26ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 20059)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:16:44 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.8ms | Allocations: 144)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 238)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 46ms (Views: 43.6ms | ActiveRecord: 0.0ms | Allocations: 20058)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:18:45 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.7ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.8ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 239)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+Completed 200 OK in 39ms (Views: 36.8ms | ActiveRecord: 0.0ms | Allocations: 20048)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:20:20 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.5ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 239)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+Completed 200 OK in 31ms (Views: 29.6ms | ActiveRecord: 0.0ms | Allocations: 20049)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:24:00 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.8ms | Allocations: 325)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 91)
+Completed 200 OK in 30ms (Views: 28.9ms | ActiveRecord: 0.0ms | Allocations: 20134)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:24:21 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.9ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 1.0ms | Allocations: 91)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 238)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 92)
+Completed 200 OK in 45ms (Views: 43.5ms | ActiveRecord: 0.0ms | Allocations: 20043)
+
+
+Started GET "/customers" for 127.0.0.1 at 2020-01-04 21:40:06 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#index as HTML
+  Rendering customers/index.html.erb within layouts/application
+  [1m[36mCustomer Load (0.2ms)[0m  [1m[34mSELECT "customers".* FROM "customers"[0m
+  ↳ app/views/customers/index.html.erb:15
+  Rendered customers/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1201)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 39ms (Views: 34.9ms | ActiveRecord: 0.2ms | Allocations: 21663)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2020-01-04 21:40:09 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 11.2ms | Allocations: 3172)
+  Rendered customers/new.html.erb within layouts/application (Duration: 12.5ms | Allocations: 3535)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 69)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 0.4ms | Allocations: 25232)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-04 21:44:09 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 5.1ms | Allocations: 3242)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms | Allocations: 22992)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-04 21:50:41 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 3.4ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 256)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 91)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.0ms | Allocations: 22535)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:50:44 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 2.7ms | Allocations: 1144)
+  Rendered customers/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 1517)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 91)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 46ms (Views: 31.8ms | ActiveRecord: 1.4ms | Allocations: 25500)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:50:46 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.6ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 31.5ms | ActiveRecord: 0.0ms | Allocations: 18468)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-01-04 21:50:47 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.4ms | Allocations: 139)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 22ms (Views: 21.4ms | ActiveRecord: 0.0ms | Allocations: 18469)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-04 21:50:48 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2487)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 30ms (Views: 29.5ms | ActiveRecord: 0.0ms | Allocations: 20527)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:50:49 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 4.1ms | Allocations: 756)
+  Rendered customers/new.html.erb within layouts/application (Duration: 6.5ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 44ms (Views: 43.0ms | ActiveRecord: 0.0ms | Allocations: 19035)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:50:50 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.2ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 109)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms | Allocations: 18195)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:53:06 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 5.0ms | Allocations: 771)
+  Rendered customers/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 868)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 87)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 37ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 19049)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:55:01 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1062)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2338)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<% provide (:title, "Your account") %>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+	<title><%= yield(:title)%> | Healthy bowl</title>
+</head>
+<body>
+
+</body>
+</html>
+<h1>New Customer</h1>
+
+<%= render 'form', customer: @customer %>
+
+<%= link_to 'Back', customers_path %>
+
+):
+1:    <!DOCTYPE html>
+2:    <% provide (:title, "Your account") %>
+3:    <html>
+4:    <head>
+5:    	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+6:    	<title><%= yield(:title)%> | Healthy bowl</title>
+7:    </head>
+8:    <body>
+9:    
+10:    </body>
+11:    </html>
+12:    <h1>New Customer</h1>
+13:    
+14:    <%= render 'form', customer: @customer %>
+15:    
+16:    <%= link_to 'Back', customers_path %>
+  
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:55:14 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 1063)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 2331)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<%= provide (:title, "Your account") %>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+	<title><%= yield(:title)%> | Healthy bowl</title>
+</head>
+<body>
+
+</body>
+</html>
+<h1>New Customer</h1>
+
+<%= render 'form', customer: @customer %>
+
+<%= link_to 'Back', customers_path %>
+
+):
+1:    <!DOCTYPE html>
+2:    <%= provide (:title, "Your account") %>
+3:    <html>
+4:    <head>
+5:    	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet"> 
+6:    	<title><%= yield(:title)%> | Healthy bowl</title>
+7:    </head>
+8:    <body>
+9:    
+10:    </body>
+11:    </html>
+12:    <h1>New Customer</h1>
+13:    
+14:    <%= render 'form', customer: @customer %>
+15:    
+16:    <%= link_to 'Back', customers_path %>
+  
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+app/views/customers/new.html.erb:2: syntax error, unexpected ',', expecting ')'
+app/views/customers/new.html.erb:2: syntax error, unexpected ')', expecting keyword_end
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:55:41 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 3.7ms | Allocations: 1088)
+  Rendered customers/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 1459)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered layouts/_header.html.erb (Duration: 1.1ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 91)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms | Allocations: 21412)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:55:55 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.4ms | Allocations: 143)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 28ms (Views: 26.8ms | ActiveRecord: 0.0ms | Allocations: 18902)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:55:56 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 1.8ms | Allocations: 756)
+  Rendered customers/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 91)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms | Allocations: 19034)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-01-04 21:55:58 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.4ms | Allocations: 138)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.3ms | Allocations: 117)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 24ms (Views: 23.3ms | ActiveRecord: 0.0ms | Allocations: 18463)
+
+
+Started GET "/" for 127.0.0.1 at 2020-01-04 21:55:59 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2728)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 92)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 29ms (Views: 27.8ms | ActiveRecord: 0.0ms | Allocations: 20921)
+
+
+Started GET "/contact" for 127.0.0.1 at 2020-01-04 21:56:00 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.3ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms | Allocations: 18199)
+
+
+Started GET "/opinions" for 127.0.0.1 at 2020-01-04 21:56:01 +0100
+Processing by StaticPagesController#opinions as HTML
+  Rendering static_pages/opinions.html.erb within layouts/application
+  Rendered static_pages/opinions.html.erb within layouts/application (Duration: 0.1ms | Allocations: 12)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 109)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms | Allocations: 18187)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 21:56:02 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 1.6ms | Allocations: 756)
+  Rendered customers/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 854)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 29ms (Views: 28.2ms | ActiveRecord: 0.0ms | Allocations: 19037)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 22:06:47 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 2.7ms | Allocations: 1088)
+  Rendered customers/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1484)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.6ms | Allocations: 90)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 254)
+  Rendered layouts/_footer.html.erb (Duration: 1.0ms | Allocations: 91)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 0.0ms | Allocations: 21437)
+
+
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddPasswordDigestToCustomers (20200104212710)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "customers" ADD "password_digest" varchar[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200104212710"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 22:37:26 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#new as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2564)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/customer.rb:9:in `<class:Customer>'
+app/models/customer.rb:1:in `<top (required)>'
+app/controllers/customers_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 22:41:18 +0100
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by CustomersController#new as HTML
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2562)
+
+
+  
+LoadError (cannot load such file -- bcrypt):
+  
+app/models/customer.rb:9:in `<class:Customer>'
+app/models/customer.rb:1:in `<top (required)>'
+app/controllers/customers_controller.rb:17:in `new'
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 22:42:26 +0100
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 6.6ms | Allocations: 3108)
+  Rendered customers/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 3780)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 99)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 263)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 94)
+Completed 200 OK in 1219ms (Views: 1199.4ms | ActiveRecord: 1.0ms | Allocations: 1474037)
+
+
+Started GET "/signup" for 127.0.0.1 at 2020-01-04 22:42:39 +0100
+Processing by CustomersController#new as HTML
+  Rendering customers/new.html.erb within layouts/application
+  Rendered customers/_form.html.erb (Duration: 5.5ms | Allocations: 756)
+  Rendered customers/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 858)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.2ms | Allocations: 91)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+Completed 200 OK in 38ms (Views: 36.3ms | ActiveRecord: 0.0ms | Allocations: 19044)
+
+
