@@ -11,7 +11,7 @@ class CustomersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get new" do
-    get new_customer_url
+    get signup_path
     assert_response :success
   end
 

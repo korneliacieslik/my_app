@@ -7,6 +7,10 @@ body {
 	padding: 60px;
 }
 
+body p {
+	text-align: center;
+}
+
 h1 {
 	text-align: center;
 	font-size: 80px;
@@ -16,7 +20,28 @@ h1 {
 
 /* header */ 
 .nav-button{
-	font-size: 20px;
+	font-size: 22px;
 	color: black;
 }
 
+/* footer */
+.footer{
+	text-align: center;
+	padding-top: 100px;
+
+}
+footer p {
+	font-size: 15px;
+}
+
+/* forms */
+input,textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+input {
+  /* height: auto !important; */
+  height: 40px;
+}
