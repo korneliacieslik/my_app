@@ -1,5 +1,11 @@
 <h1>Your opinions about us</h1>
 
+<button type="button", class="nav-button btn-link">
+	<%= link_to "Add your opinion", opinion_new_path %>	
+</button>
+<br>
 <% @opinions.each do |opinion| %>
   <%= opinion.content %>
+  <br>
 <% end %> 
+
