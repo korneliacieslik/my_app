@@ -1,2 +1,9 @@
-<h1>Opinion#new</h1>
-<p>Find me in app/views/opinion/new.html.erb</p>
+<h1>Add opinion</h1>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+  	<%= form_for :opinion do |f| %>
+  		Content: <%= f.text_area :content %>
+  		<%= f.submit %>
+  	<% end %>
+   </div>
+</div>
