@@ -2,6 +2,8 @@
 @import "bootstrap";
 
 /* mixin, variables, etd. */
+$gray-medium-light: #eaeaea;
+
 @mixin box_sizing {
   -moz-box-sizing:    border-box;
   -webkit-box-sizing: border-box;
