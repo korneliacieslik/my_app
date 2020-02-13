@@ -1,4 +1,4 @@
-class OpinionController < ApplicationController
+class OpinionsController < ApplicationController
   def index
     @opinions = Opinion.all.order("opinions.created_at desc")
   end
@@ -26,9 +26,6 @@ class OpinionController < ApplicationController
 
   def edit
   end
-
-  def update
-  end 
 
   def show 
     @opinion = Opinion.find(params[:id])

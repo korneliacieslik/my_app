@@ -1,17 +1,17 @@
 Rails.application.routes.draw do 
-  resources :customers, :opinions, :orders, :products
+  resources :customers, :opinionss, :orders, :products
 
-  get 'opinion/index'
-  get 'opinion/new'
-  post'opinion/create'
-  get 'opinion/destroy'
-  get 'opinion/edit'
-  post'opinion/update'
+  get 'opinions/index'
+  get 'opinions/new'
+  post'opinions/create'
+  get 'opinions/destroy'
+  get 'opinions/edit'
+  post'opinions/update'
   
   root 'static_pages#home'
   
   get '/contact', to: 'static_pages#contact'
-  get '/opinions', to: 'static_pages#opinions'
+  get '/opinionss', to: 'static_pages#opinionss'
   get '/signup', to: 'customers#new'
 end
 
