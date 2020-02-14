@@ -1,5 +1,5 @@
 Rails.application.routes.draw do 
-  resources :customers, :opinionss, :orders, :products
+  resources :customers, :opinions, :orders, :products
 
   get 'opinions/index'
   get 'opinions/new'
@@ -11,8 +11,9 @@ Rails.application.routes.draw do
   root 'static_pages#home'
   
   get '/contact', to: 'static_pages#contact'
-  get '/opinionss', to: 'static_pages#opinionss'
+  get '/opinions', to: 'static_pages#opinions'
   get '/signup', to: 'customers#new'
+
 end
 
 

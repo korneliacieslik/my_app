@@ -6,6 +6,10 @@ class Customer < ApplicationRecord
 	validates :email, presence: true 
 
 	#Rails method
-	has_secure_password 
-	validates :password, presence: true, length: {minimum: 6}
+	#If both below are commented new customer can be signed up, else it doesn't work. ??
+	
+	#has_secure_password 
+	#validates :password , presence: true, length: {minimum: 6}  
+
+
 end

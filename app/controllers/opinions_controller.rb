@@ -8,8 +8,7 @@ class OpinionsController < ApplicationController
   end
 
   def create
-    @opinion = current_customer.opinion.new(opinion_params)
-    
+    @opinion = current_customer.opinions.new(opinion_params)
     respond_to do |format|
       if @opinion.save
         format.html {redirect_to @opinion, notice: "Thanks for your opinion!"}
