@@ -1,6 +1,9 @@
 <h1>Editing Customer</h1>
-
+<!-- Render partial _form.html.erb as a part of a view. -->
 <%= render 'form', customer: @customer %>
 
-<%= link_to 'Show', @customer %> |
+<%= link_to 'Show', @customer %> | 
+<!-- => <a href ="/customers/id">Show</a> -->
+
 <%= link_to 'Back', customers_path %>
+<!-- <a href="/customers">Back</a> -->

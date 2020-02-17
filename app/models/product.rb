@@ -1,3 +1,5 @@
 class Product < ApplicationRecord
-	belongs_to :order
+	
+	#One insance of Product belongs to many instance of Order.
+	
 end

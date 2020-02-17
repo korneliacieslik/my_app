@@ -1,6 +1,10 @@
 class Customer < ApplicationRecord
-	has_many :products, through: :order
+  # Active Record Associations
+  # has_many through indicates many-to-many connection
+  has_many :products, through: :order
+	# has_many indicates a one-to-many connection
 	has_many :orders
+	
 	validates :name, presence: true, length: {minimum: 2}
 	validates :email, presence: true 
 

@@ -1,2 +1,2 @@
-class Opinion < ApplicationRecord #Why Opinion inheritance form ApplicationRecord? 
+class Opinion < ApplicationRecord 
 end 
