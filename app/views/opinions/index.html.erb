@@ -1,17 +1,27 @@
-<h1>Your opinions about us</h1>
-
-<button type="button", class="nav-button btn-link">
-
-	<%= link_to "Add your opinion", new_opinion_url %>
-
-</button>
-
-<br>
+<head>
 	
-	<% @opinions.each do |opinion| %>
-  	<%= opinion.content %>
- 
- <br>
+	<link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
-<% end %> 
+</head>
+
+<body>
+	
+	<h1>You about us</h1>
+
+	<button type="button", class="nav-button btn-link"><%= link_to "Add your opinion", new_opinion_url %>
+	</button>
+
+	<br>
+	
+		<% @opinions.each do |opinion| %>
+  	
+  			<%= opinion.content %>
+  	
+  		<% end %> 
+ 
+ 	<br>
+
+</body>
+
+
 
