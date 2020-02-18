@@ -46,6 +46,24 @@ class OpinionsController < ApplicationController
 
   def update
 
+    respond_to do |format|
+
+      if @opinion.edit
+
+        format.html  {redirect_to @opinion, notice: "Opinion was sucsessfully edit!"}
+        
+        format.json {render :show, status: :created, location: @opinion}
+
+      else
+
+        format.html { render :edit }
+        
+        format.json { render json: @opinion.errors, status: :unprocessable_entity }
+
+      end 
+
+    end
+
   end
 
   def show 
