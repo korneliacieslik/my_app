@@ -41,6 +41,7 @@ class OpinionsController < ApplicationController
   end
 
   def edit
+    @opinion =  Opinion.new
     
   end
 

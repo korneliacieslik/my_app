@@ -1,2 +1,6 @@
-<h1>Opinion#edit</h1>
-<p>Find me in app/views/opinion/edit.html.erb</p>
+<h1>Edit your opinion</h1>
+
+<%= render 'form', opinion: @opinion %>
+
+<%= link_to 'Back', opinions_path %>
+<!-- <a href="/opinions">Back</a> -->
