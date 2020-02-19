@@ -19,6 +19,7 @@ class CustomersController < ApplicationController
 
   # GET /customers/1/edit
   def edit
+  
   end
 
   # POST /customers
@@ -40,15 +41,25 @@ class CustomersController < ApplicationController
   # PATCH/PUT /customers/1
   # PATCH/PUT /customers/1.json
   def update
+    
     respond_to do |format|
+      
       if @customer.update(customer_params)
+        
         format.html { redirect_to @customer, notice: 'Customer was successfully updated.' }
+        
         format.json { render :show, status: :ok, location: @customer }
+      
       else
+        
         format.html { render :edit }
+        
         format.json { render json: @customer.errors, status: :unprocessable_entity }
+      
       end
+    
     end
+  
   end
 
   # DELETE /customers/1
@@ -56,6 +67,7 @@ class CustomersController < ApplicationController
   def destroy
     @customer.destroy
     respond_to do |format|
+      # Redirect and create a flash message.
       format.html { redirect_to customers_url, notice: 'Customer was successfully destroyed.' }
       format.json { head :no_content }
     end

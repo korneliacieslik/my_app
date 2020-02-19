@@ -1,7 +1,7 @@
 class AddTimestampsToOpinions < ActiveRecord::Migration[6.0]
   def change
   # add new column but allow null values
-  add_timestamps :opinions, null: true 
+  add_timestamps :opinions, null: false, defeault: -> { 'NOW()' }
 
   # backfill existing record with created_at and updated_at
   # values making clear that the records are faked
