@@ -1,0 +1,36 @@
+<head>
+	
+  <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+	
+	<h1>You about us</h1>
+
+	<button type="button", class="nav-button btn-link"><%= link_to "Add your opinion", new_opinion_url %></button>
+
+	<br>
+  <br>
+	
+		<% @opinions.each do |opinion| %>
+
+      <tr>
+  	  
+        <td><%= opinion.content %><td>
+  			
+  		  <td><%= link_to 'Show', opinion %></td>
+
+  		  <td><%= link_to 'Edit', edit_opinion_path(opinion) %></td>
+
+  		  <td><%= link_to 'Destroy', opinion, method: :delete, data: { confirm: 'Are tou sure?'} %></td>
+
+      </tr>
+
+      <br>
+
+  	<% end %> 
+ 
+
+
+</body>
