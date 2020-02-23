@@ -19,9 +19,4 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
     assert_select "title", "Contact | Healthy bowl"
   end
 
-  test "should get opinions" do
-    get opinions_path
-    assert_response :success
-    assert_select "title", "Opinions | Healthy bowl"
-  end
 end
