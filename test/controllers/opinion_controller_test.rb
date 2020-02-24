@@ -4,15 +4,15 @@ class OpinionControllerTest < ActionDispatch::IntegrationTest
 
   test "should get index" do 
     
-    get '/opinions'
+    get opinions_path
     
     assert_response :success
   
   end
 
   test "should get new" do
-    
-    get '/opinions/new'
+   
+    get new_opinion_path
     
     assert_response :success
   
