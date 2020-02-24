@@ -9,7 +9,6 @@ class StaticPagesControllerTest < ActionDispatch::IntegrationTest
   test "should get home" do
     get root_path
     assert_response :success
-    # an assertion that selects elements amd makes equality test
     assert_select "title", "Home | Healthy bowl"
   end
 
