@@ -1,5 +1,6 @@
 Rails.application.routes.draw do 
   
+  devise_for :users
   resources :customers, :opinions, :orders, :products
 
   root 'static_pages#home'
