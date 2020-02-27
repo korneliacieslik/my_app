@@ -47176,3 +47176,2259 @@ Completed 200 OK in 55ms (Views: 54.0ms | ActiveRecord: 0.0ms | Allocations: 118
   Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 89)
 Completed 200 OK in 2044ms (Views: 2021.2ms | ActiveRecord: 0.2ms | Allocations: 1272515)
   [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (8.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar)[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (8.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (7.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227190619)[0m
+  [1m[35m (7.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012);
+
+[0m
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 19:06:57.772522"], ["updated_at", "2020-02-27 19:06:57.772522"]]
+  [1m[35m (7.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6d51428aaa2af489dc9879997c6342ad3dbcb2fa"], ["created_at", "2020-02-27 19:06:57.785605"], ["updated_at", "2020-02-27 19:06:57.785605"]]
+  [1m[35m (7.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (13.6ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (4.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (15.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (19.5ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (13.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (14.8ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (16.1ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (13.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar)[0m
+  [1m[35m (17.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (15.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (16.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar)[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (1.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (18.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (18.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar)[0m
+  [1m[35m (26.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar)[0m
+  [1m[35m (14.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (14.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (16.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (15.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (11.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227190619)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (15.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012);
+
+[0m
+  [1m[35m (14.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (17.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227190619)[0m
+  [1m[35m (16.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (12.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227190619)[0m
+  [1m[35m (6.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012);
+
+[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 19:06:58.063553"], ["updated_at", "2020-02-27 19:06:58.063553"]]
+  [1m[35m (23.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012);
+
+[0m
+  [1m[35m (25.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227190619)[0m
+  [1m[35m (23.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (28.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (18.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012);
+
+[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (20.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 19:06:58.111275"], ["updated_at", "2020-02-27 19:06:58.111275"]]
+  [1m[35m (6.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6d51428aaa2af489dc9879997c6342ad3dbcb2fa"], ["created_at", "2020-02-27 19:06:58.105223"], ["updated_at", "2020-02-27 19:06:58.105223"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (13.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 19:06:58.108288"], ["updated_at", "2020-02-27 19:06:58.108288"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 19:06:58.120497"], ["updated_at", "2020-02-27 19:06:58.120497"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6d51428aaa2af489dc9879997c6342ad3dbcb2fa"], ["created_at", "2020-02-27 19:06:58.126686"], ["updated_at", "2020-02-27 19:06:58.126686"]]
+  [1m[35m (12.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (19.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (14.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (21.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6d51428aaa2af489dc9879997c6342ad3dbcb2fa"], ["created_at", "2020-02-27 19:06:58.150280"], ["updated_at", "2020-02-27 19:06:58.150280"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "6d51428aaa2af489dc9879997c6342ad3dbcb2fa"], ["created_at", "2020-02-27 19:06:58.146500"], ["updated_at", "2020-02-27 19:06:58.146500"]]
+  [1m[35m (11.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (13.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (81.4ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (91.1ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (94.1ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (94.1ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.200562', '2020-02-27 19:09:16.200562');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.200562', '2020-02-27 19:09:16.200562');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.203835', '2020-02-27 19:09:16.203835');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.203835', '2020-02-27 19:09:16.203835');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.216710', '2020-02-27 19:09:16.216710');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.216710', '2020-02-27 19:09:16.216710')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.228389', '2020-02-27 19:09:16.228389');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.228389', '2020-02-27 19:09:16.228389');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.231903', '2020-02-27 19:09:16.231903');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.231903', '2020-02-27 19:09:16.231903');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.235007', '2020-02-27 19:09:16.235007');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.235007', '2020-02-27 19:09:16.235007')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.239558', '2020-02-27 19:09:16.239558');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.239558', '2020-02-27 19:09:16.239558');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.242053', '2020-02-27 19:09:16.242053');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.242053', '2020-02-27 19:09:16.242053');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.244263', '2020-02-27 19:09:16.244263');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.244263', '2020-02-27 19:09:16.244263')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.257477', '2020-02-27 19:09:16.257477');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.257477', '2020-02-27 19:09:16.257477');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.257587', '2020-02-27 19:09:16.257587');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.257587', '2020-02-27 19:09:16.257587');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.257671', '2020-02-27 19:09:16.257671');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.257671', '2020-02-27 19:09:16.257671')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (1.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (2.2ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.234357', '2020-02-27 19:09:16.234357');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.234357', '2020-02-27 19:09:16.234357');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.249765', '2020-02-27 19:09:16.249765');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.249765', '2020-02-27 19:09:16.249765');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.252841', '2020-02-27 19:09:16.252841');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.252841', '2020-02-27 19:09:16.252841')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.268699', '2020-02-27 19:09:16.268699');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.268699', '2020-02-27 19:09:16.268699');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.268824', '2020-02-27 19:09:16.268824');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.268824', '2020-02-27 19:09:16.268824');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.268914', '2020-02-27 19:09:16.268914');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.268914', '2020-02-27 19:09:16.268914')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.279301', '2020-02-27 19:09:16.279301');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.279301', '2020-02-27 19:09:16.279301');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.279497', '2020-02-27 19:09:16.279497');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.279497', '2020-02-27 19:09:16.279497');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.279609', '2020-02-27 19:09:16.279609');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.279609', '2020-02-27 19:09:16.279609')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.275651', '2020-02-27 19:09:16.275651');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.275651', '2020-02-27 19:09:16.275651');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.275824', '2020-02-27 19:09:16.275824');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.275824', '2020-02-27 19:09:16.275824');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.275932', '2020-02-27 19:09:16.275932');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.275932', '2020-02-27 19:09:16.275932')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (8.8ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mFixtures Load (3.1ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.289570', '2020-02-27 19:09:16.289570');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.289570', '2020-02-27 19:09:16.289570');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.289731', '2020-02-27 19:09:16.289731');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.289731', '2020-02-27 19:09:16.289731');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.289820', '2020-02-27 19:09:16.289820');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.289820', '2020-02-27 19:09:16.289820')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.307667', '2020-02-27 19:09:16.307667');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.307667', '2020-02-27 19:09:16.307667');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.307836', '2020-02-27 19:09:16.307836');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.307836', '2020-02-27 19:09:16.307836');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.307971', '2020-02-27 19:09:16.307971');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.307971', '2020-02-27 19:09:16.307971')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[36mFixtures Load (1.1ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.309216', '2020-02-27 19:09:16.309216');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.309216', '2020-02-27 19:09:16.309216');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.309488', '2020-02-27 19:09:16.309488');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.309488', '2020-02-27 19:09:16.309488');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.309638', '2020-02-27 19:09:16.309638');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.309638', '2020-02-27 19:09:16.309638')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.309617', '2020-02-27 19:09:16.309617');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.309617', '2020-02-27 19:09:16.309617');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.309728', '2020-02-27 19:09:16.309728');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.309728', '2020-02-27 19:09:16.309728');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.309860', '2020-02-27 19:09:16.309860');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.309860', '2020-02-27 19:09:16.309860')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.317807', '2020-02-27 19:09:16.317807');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.317807', '2020-02-27 19:09:16.317807');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:09:16.318007', '2020-02-27 19:09:16.318007');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:09:16.318007', '2020-02-27 19:09:16.318007');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:09:16.318168', '2020-02-27 19:09:16.318168');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:09:16.318168', '2020-02-27 19:09:16.318168')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (79.0ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (88.3ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (78.7ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (86.4ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.829894', '2020-02-27 19:39:01.829894');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.829894', '2020-02-27 19:39:01.829894');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.833847', '2020-02-27 19:39:01.833847');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.833847', '2020-02-27 19:39:01.833847');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.837402', '2020-02-27 19:39:01.837402');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.837402', '2020-02-27 19:39:01.837402')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.833058', '2020-02-27 19:39:01.833058');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.833058', '2020-02-27 19:39:01.833058');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.836263', '2020-02-27 19:39:01.836263');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.836263', '2020-02-27 19:39:01.836263');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.838652', '2020-02-27 19:39:01.838652');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.838652', '2020-02-27 19:39:01.838652')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.828417', '2020-02-27 19:39:01.828417');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.828417', '2020-02-27 19:39:01.828417');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.831807', '2020-02-27 19:39:01.831807');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.831807', '2020-02-27 19:39:01.831807');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.834518', '2020-02-27 19:39:01.834518');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.834518', '2020-02-27 19:39:01.834518')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.874540', '2020-02-27 19:39:01.874540');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.874540', '2020-02-27 19:39:01.874540');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.874656', '2020-02-27 19:39:01.874656');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.874656', '2020-02-27 19:39:01.874656');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.874764', '2020-02-27 19:39:01.874764');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.874764', '2020-02-27 19:39:01.874764')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (8.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.851859', '2020-02-27 19:39:01.851859');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.851859', '2020-02-27 19:39:01.851859');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.855020', '2020-02-27 19:39:01.855020');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.855020', '2020-02-27 19:39:01.855020');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.864516', '2020-02-27 19:39:01.864516');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.864516', '2020-02-27 19:39:01.864516')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.881989', '2020-02-27 19:39:01.881989');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.881989', '2020-02-27 19:39:01.881989');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.882139', '2020-02-27 19:39:01.882139');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.882139', '2020-02-27 19:39:01.882139');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.882252', '2020-02-27 19:39:01.882252');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.882252', '2020-02-27 19:39:01.882252')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.890508', '2020-02-27 19:39:01.890508');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.890508', '2020-02-27 19:39:01.890508');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.890679', '2020-02-27 19:39:01.890679');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.890679', '2020-02-27 19:39:01.890679');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.890802', '2020-02-27 19:39:01.890802');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.890802', '2020-02-27 19:39:01.890802')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.902358', '2020-02-27 19:39:01.902358');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.902358', '2020-02-27 19:39:01.902358');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.902501', '2020-02-27 19:39:01.902501');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.902501', '2020-02-27 19:39:01.902501');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.902652', '2020-02-27 19:39:01.902652');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.902652', '2020-02-27 19:39:01.902652')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.906480', '2020-02-27 19:39:01.906480');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.906480', '2020-02-27 19:39:01.906480');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.906629', '2020-02-27 19:39:01.906629');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.906629', '2020-02-27 19:39:01.906629');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.906739', '2020-02-27 19:39:01.906739');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.906739', '2020-02-27 19:39:01.906739')[0m
+  [1m[36mFixtures Load (11.0ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.898981', '2020-02-27 19:39:01.898981');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.898981', '2020-02-27 19:39:01.898981');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.899118', '2020-02-27 19:39:01.899118');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.899118', '2020-02-27 19:39:01.899118');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.899216', '2020-02-27 19:39:01.899216');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.899216', '2020-02-27 19:39:01.899216')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.917454', '2020-02-27 19:39:01.917454');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.917454', '2020-02-27 19:39:01.917454');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.917657', '2020-02-27 19:39:01.917657');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.917657', '2020-02-27 19:39:01.917657');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.917829', '2020-02-27 19:39:01.917829');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.917829', '2020-02-27 19:39:01.917829')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.917454', '2020-02-27 19:39:01.917454');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.917454', '2020-02-27 19:39:01.917454');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.917675', '2020-02-27 19:39:01.917675');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.917675', '2020-02-27 19:39:01.917675');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.917844', '2020-02-27 19:39:01.917844');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.917844', '2020-02-27 19:39:01.917844')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.950582', '2020-02-27 19:39:01.950582');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.950582', '2020-02-27 19:39:01.950582');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:39:01.950951', '2020-02-27 19:39:01.950951');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:39:01.950951', '2020-02-27 19:39:01.950951');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:39:01.951228', '2020-02-27 19:39:01.951228');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:39:01.951228', '2020-02-27 19:39:01.951228')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (101.5ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (103.7ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (98.6ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (108.0ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.860382', '2020-02-27 19:40:42.860382');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.860382', '2020-02-27 19:40:42.860382');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.863016', '2020-02-27 19:40:42.863016');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.863016', '2020-02-27 19:40:42.863016');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.865191', '2020-02-27 19:40:42.865191');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.865191', '2020-02-27 19:40:42.865191')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.861716', '2020-02-27 19:40:42.861716');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.861716', '2020-02-27 19:40:42.861716');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.864510', '2020-02-27 19:40:42.864510');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.864510', '2020-02-27 19:40:42.864510');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.867265', '2020-02-27 19:40:42.867265');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.867265', '2020-02-27 19:40:42.867265')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.9ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.865250', '2020-02-27 19:40:42.865250');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.865250', '2020-02-27 19:40:42.865250');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.867977', '2020-02-27 19:40:42.867977');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.867977', '2020-02-27 19:40:42.867977');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.870457', '2020-02-27 19:40:42.870457');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.870457', '2020-02-27 19:40:42.870457')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.870035', '2020-02-27 19:40:42.870035');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.870035', '2020-02-27 19:40:42.870035');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.876531', '2020-02-27 19:40:42.876531');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.876531', '2020-02-27 19:40:42.876531');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.879434', '2020-02-27 19:40:42.879434');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.879434', '2020-02-27 19:40:42.879434')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.896290', '2020-02-27 19:40:42.896290');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.896290', '2020-02-27 19:40:42.896290');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.896428', '2020-02-27 19:40:42.896428');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.896428', '2020-02-27 19:40:42.896428');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.896543', '2020-02-27 19:40:42.896543');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.896543', '2020-02-27 19:40:42.896543')[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.897266', '2020-02-27 19:40:42.897266');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.897266', '2020-02-27 19:40:42.897266');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.897369', '2020-02-27 19:40:42.897369');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.897369', '2020-02-27 19:40:42.897369');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.897454', '2020-02-27 19:40:42.897454');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.897454', '2020-02-27 19:40:42.897454')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[36mFixtures Load (0.8ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.908593', '2020-02-27 19:40:42.908593');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.908593', '2020-02-27 19:40:42.908593');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.908701', '2020-02-27 19:40:42.908701');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.908701', '2020-02-27 19:40:42.908701');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.908784', '2020-02-27 19:40:42.908784');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.908784', '2020-02-27 19:40:42.908784')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mFixtures Load (0.7ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.908804', '2020-02-27 19:40:42.908804');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.908804', '2020-02-27 19:40:42.908804');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.908951', '2020-02-27 19:40:42.908951');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.908951', '2020-02-27 19:40:42.908951');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.909063', '2020-02-27 19:40:42.909063');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.909063', '2020-02-27 19:40:42.909063')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.904594', '2020-02-27 19:40:42.904594');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.904594', '2020-02-27 19:40:42.904594');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.904742', '2020-02-27 19:40:42.904742');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.904742', '2020-02-27 19:40:42.904742');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.904855', '2020-02-27 19:40:42.904855');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.904855', '2020-02-27 19:40:42.904855')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.918107', '2020-02-27 19:40:42.918107');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.918107', '2020-02-27 19:40:42.918107');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.918277', '2020-02-27 19:40:42.918277');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.918277', '2020-02-27 19:40:42.918277');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.918360', '2020-02-27 19:40:42.918360');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.918360', '2020-02-27 19:40:42.918360')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.922403', '2020-02-27 19:40:42.922403');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.922403', '2020-02-27 19:40:42.922403');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.922523', '2020-02-27 19:40:42.922523');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.922523', '2020-02-27 19:40:42.922523');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.922598', '2020-02-27 19:40:42.922598');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.922598', '2020-02-27 19:40:42.922598')[0m
+  [1m[35m (0.3ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.0ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.924485', '2020-02-27 19:40:42.924485');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.924485', '2020-02-27 19:40:42.924485');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.924636', '2020-02-27 19:40:42.924636');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.924636', '2020-02-27 19:40:42.924636');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.924736', '2020-02-27 19:40:42.924736');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.924736', '2020-02-27 19:40:42.924736')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.5ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.925747', '2020-02-27 19:40:42.925747');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.925747', '2020-02-27 19:40:42.925747');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 19:40:42.925923', '2020-02-27 19:40:42.925923');
+INSERT INTO "users" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 19:40:42.925923', '2020-02-27 19:40:42.925923');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 19:40:42.926030', '2020-02-27 19:40:42.926030');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 19:40:42.926030', '2020-02-27 19:40:42.926030')[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (67.8ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (2.7ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.4ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (75.0ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (71.7ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[36mTruncate Tables (83.7ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:08.004852', '2020-02-27 20:06:08.004852');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:08.004852', '2020-02-27 20:06:08.004852');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:08.007751', '2020-02-27 20:06:08.007751');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:08.007751', '2020-02-27 20:06:08.007751')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:08.010773', '2020-02-27 20:06:08.010773');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:08.010773', '2020-02-27 20:06:08.010773');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:08.013250', '2020-02-27 20:06:08.013250');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:08.013250', '2020-02-27 20:06:08.013250')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+  [1m[35m (0.6ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (2.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:08.010786', '2020-02-27 20:06:08.010786');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:08.010786', '2020-02-27 20:06:08.010786');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:08.015473', '2020-02-27 20:06:08.015473');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:08.015473', '2020-02-27 20:06:08.015473')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:08.017728', '2020-02-27 20:06:08.017728');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:08.017728', '2020-02-27 20:06:08.017728');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:08.026441', '2020-02-27 20:06:08.026441');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:08.026441', '2020-02-27 20:06:08.026441')[0m
+  [1m[35m (10.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (16.0ms)[0m  [1m[36mcommit transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_root
+-----------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[35m (21.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+  [1m[36mProduct Load (0.9ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:06:08 +0100
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2020-02-27 21:06:08 +0100
+Started GET "/contact" for 127.0.0.1 at 2020-02-27 21:06:08 +0100
+Processing by StaticPagesController#home as HTML
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:06:08 +0100
+  Rendering static_pages/home.html.erb within layouts/application
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+Processing by StaticPagesController#contact as HTML
+  Rendered products/_form.html.erb (Duration: 7.0ms | Allocations: 3307)
+  Rendered products/edit.html.erb within layouts/application (Duration: 8.8ms | Allocations: 3817)
+  Rendering static_pages/contact.html.erb within layouts/application
+Processing by StaticPagesController#home as HTML
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 4.0ms | Allocations: 261)
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 94)
+  Rendered layouts/_header.html.erb (Duration: 5.1ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 139)
+Completed 200 OK in 2717ms (Views: 2704.6ms | ActiveRecord: 0.2ms | Allocations: 1276481)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2729.1ms | Allocations: 1264405)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/products" for 127.0.0.1 at 2020-02-27 21:06:10 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.2ms)[0m  [1m[32mINSERT INTO "products" ("description", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "MyText"], ["name", "MyString"], ["created_at", "2020-02-27 20:06:10.982095"], ["updated_at", "2020-02-27 20:06:10.982095"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/980190963
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 911)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 2652.2ms | Allocations: 1264405)
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 88)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_header.html.erb (Duration: 8.7ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.4ms | Allocations: 89)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started DELETE "/products/980190962" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+  Rendered layouts/_alerts.html.erb (Duration: 8.8ms | Allocations: 139)
+Completed 200 OK in 2816ms (Views: 2788.4ms | ActiveRecord: 0.0ms | Allocations: 1275741)
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (0.2ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 565)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 88)
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered layouts/_header.html.erb (Duration: 16.9ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.7ms | Allocations: 89)
+Started GET "/products/980190962" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+  Rendered layouts/_alerts.html.erb (Duration: 10.3ms | Allocations: 139)
+Processing by ProductsController#show as HTML
+Completed 200 OK in 2760ms (Views: 2733.0ms | ActiveRecord: 0.0ms | Allocations: 1275741)
+  Parameters: {"id"=>"980190962"}
+Started GET "/products/new" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering products/show.html.erb within layouts/application
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 271)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.4ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+Started GET "/products" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.2ms | Allocations: 8843)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by ProductsController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  Rendered products/_form.html.erb (Duration: 11.3ms | Allocations: 3250)
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered products/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 3581)
+  Rendering products/index.html.erb within layouts/application
+Started PATCH "/products/980190962" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (Duration: 3.6ms | Allocations: 754)
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.5ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/products/980190962
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 577)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+CustomerTest: test_password_should_have_a_minimum_length
+--------------------------------------------------------
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 52ms (Views: 50.5ms | ActiveRecord: 0.0ms | Allocations: 12673)
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+OpinionControllerTest: test_should_get_index
+--------------------------------------------
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+Started GET "/opinions" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+OpinionControllerTest: test_should_get_new
+------------------------------------------
+Started GET "/opinions/new" for 127.0.0.1 at 2020-02-27 21:06:11 +0100
+Processing by OpinionsController#index as HTML
+Completed 200 OK in 41ms (Views: 39.2ms | ActiveRecord: 0.3ms | Allocations: 9829)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Processing by OpinionsController#new as HTML
+  Rendering opinions/index.html.erb within layouts/application
+  [1m[36mOpinion Load (0.2ms)[0m  [1m[34mSELECT "opinions".* FROM "opinions" ORDER BY opinions.created_at desc[0m
+  Rendered opinions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.2ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 4.6ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 23)
+Completed 200 OK in 40ms (Views: 36.0ms | ActiveRecord: 0.6ms | Allocations: 10243)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering opinions/new.html.erb within layouts/application
+  Rendered opinions/_form.html.erb (Duration: 4.3ms | Allocations: 875)
+  Rendered opinions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1171)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.6ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 23)
+Completed 200 OK in 63ms (Views: 26.7ms | ActiveRecord: 0.6ms | Allocations: 14277)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 532)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 139)
+Completed 200 OK in 3036ms (Views: 3028.9ms | ActiveRecord: 0.0ms | Allocations: 1272735)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.5ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[36mTruncate Tables (83.1ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.9ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (96.3ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[36mTruncate Tables (97.9ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mTruncate Tables (90.4ms)[0m  [1m[31mDELETE FROM "opinions";
+DELETE FROM "orders";
+DELETE FROM "products";
+DELETE FROM "sessions";
+DELETE FROM "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (1.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:59.444087', '2020-02-27 20:06:59.444087');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:59.444087', '2020-02-27 20:06:59.444087');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:59.447053', '2020-02-27 20:06:59.447053');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:59.447053', '2020-02-27 20:06:59.447053')[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (9.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+OpinionControllerTest: test_should_get_index
+--------------------------------------------
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:59.460104', '2020-02-27 20:06:59.460104');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:59.460104', '2020-02-27 20:06:59.460104');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:59.470620', '2020-02-27 20:06:59.470620');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:59.470620', '2020-02-27 20:06:59.470620')[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:59.463663', '2020-02-27 20:06:59.463663');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:59.463663', '2020-02-27 20:06:59.463663');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:59.474462', '2020-02-27 20:06:59.474462');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:59.474462', '2020-02-27 20:06:59.474462')[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:06:59.488759', '2020-02-27 20:06:59.488759');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:06:59.488759', '2020-02-27 20:06:59.488759');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:06:59.492290', '2020-02-27 20:06:59.492290');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:06:59.492290', '2020-02-27 20:06:59.492290')[0m
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.3ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+  [1m[35m (25.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+OpinionControllerTest: test_should_get_new
+------------------------------------------
+Started GET "/opinions" for 127.0.0.1 at 2020-02-27 21:06:59 +0100
+Started GET "/contact" for 127.0.0.1 at 2020-02-27 21:06:59 +0100
+Processing by OpinionsController#index as HTML
+Processing by StaticPagesController#contact as HTML
+  Rendering opinions/index.html.erb within layouts/application
+  [1m[36mOpinion Load (0.2ms)[0m  [1m[34mSELECT "opinions".* FROM "opinions" ORDER BY opinions.created_at desc[0m
+  Rendered opinions/index.html.erb within layouts/application (Duration: 3.4ms | Allocations: 870)
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.9ms | Allocations: 261)
+Started GET "/opinions/new" for 127.0.0.1 at 2020-02-27 21:06:59 +0100
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:06:59 +0100
+Processing by OpinionsController#new as HTML
+  Rendering opinions/new.html.erb within layouts/application
+  Rendered opinions/_form.html.erb (Duration: 5.8ms | Allocations: 2894)
+  Rendered opinions/new.html.erb within layouts/application (Duration: 7.1ms | Allocations: 3320)
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.4ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 5.2ms | Allocations: 532)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.4ms | Allocations: 139)
+Completed 200 OK in 2844ms (Views: 2835.9ms | ActiveRecord: 0.0ms | Allocations: 1272735)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_root
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.1ms | Allocations: 3275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.7ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 38ms (Views: 37.3ms | ActiveRecord: 0.0ms | Allocations: 11634)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/products" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}}
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.3ms)[0m  [1m[32mINSERT INTO "products" ("description", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "MyText"], ["name", "MyString"], ["created_at", "2020-02-27 20:07:02.576546"], ["updated_at", "2020-02-27 20:07:02.576546"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/980190963
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms | Allocations: 1032)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 9.4ms | Allocations: 3226)
+  Rendered products/edit.html.erb within layouts/application (Duration: 11.7ms | Allocations: 3607)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 0.3ms | Allocations: 12828)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 94)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/980190962" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 503)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 139)
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+Completed 200 OK in 2881ms (Views: 2857.7ms | ActiveRecord: 0.8ms | Allocations: 1280011)
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered products/show.html.erb within layouts/application (Duration: 0.7ms | Allocations: 271)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 2.0ms | Allocations: 95)
+Started GET "/products" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+  Rendered layouts/_header.html.erb (Duration: 8.7ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.5ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.6ms | Allocations: 139)
+Completed 200 OK in 3032ms (Views: 3019.6ms | ActiveRecord: 0.5ms | Allocations: 1273745)
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendered products/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 743)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 2.0ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 42ms (Views: 40.3ms | ActiveRecord: 0.2ms | Allocations: 9819)
+[Webpacker] Everything's up-to-date. Nothing to do
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 1.0ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 12)
+Completed 200 OK in 87ms (Views: 85.8ms | ActiveRecord: 0.1ms | Allocations: 8842)
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started GET "/products/new" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started DELETE "/products/980190962" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+Started PATCH "/products/980190962" for 127.0.0.1 at 2020-02-27 21:07:02 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/products/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.2ms | Allocations: 577)
+Processing by ProductsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering products/new.html.erb within layouts/application
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (1.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (1.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.2ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 20ms (ActiveRecord: 3.0ms | Allocations: 705)
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  Rendered products/_form.html.erb (Duration: 31.7ms | Allocations: 3251)
+  Rendered products/new.html.erb within layouts/application (Duration: 33.2ms | Allocations: 3582)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 1.9ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.1ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 23)
+Completed 200 OK in 89ms (Views: 86.9ms | ActiveRecord: 0.0ms | Allocations: 12675)
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3167.7ms | Allocations: 1264405)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.5ms | Allocations: 88)
+  Rendered layouts/_header.html.erb (Duration: 5.7ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.5ms | Allocations: 139)
+Completed 200 OK in 3253ms (Views: 3227.3ms | ActiveRecord: 0.0ms | Allocations: 1275741)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (5.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar, "confirmed_at" datetime, "confirmation_token" varchar, "confirmation_sent_at" datetime, "unconfirmed_email" varchar)[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (7.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (6.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227203642)[0m
+  [1m[35m (6.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012),
+(20200227190619),
+(20200227202440);
+
+[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 20:40:13.812745"], ["updated_at", "2020-02-27 20:40:13.812745"]]
+  [1m[35m (7.2ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e587161f9ef3aa6434fcbd436bbb0230f8a6f173"], ["created_at", "2020-02-27 20:40:13.824069"], ["updated_at", "2020-02-27 20:40:13.824069"]]
+  [1m[35m (7.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (15.9ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "opinions"[0m
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (20.7ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (16.5ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (19.1ms)[0m  [1m[35mCREATE TABLE "opinions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" text, "customer_id" integer, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (17.3ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "orders"[0m
+  [1m[35m (15.8ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (18.7ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "orders" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "user_id" integer)[0m
+  [1m[35m (18.1ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "products"[0m
+  [1m[35m (17.0ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "products" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "description" text, "name" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "sessions"[0m
+  [1m[35m (17.2ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (12.5ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (12.3ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (14.7ms)[0m  [1m[35mCREATE TABLE "sessions" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar, "confirmed_at" datetime, "confirmation_token" varchar, "confirmation_sent_at" datetime, "unconfirmed_email" varchar)[0m
+  [1m[35m (13.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar, "confirmed_at" datetime, "confirmation_token" varchar, "confirmation_sent_at" datetime, "unconfirmed_email" varchar)[0m
+  [1m[35m (13.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar, "confirmed_at" datetime, "confirmation_token" varchar, "confirmation_sent_at" datetime, "unconfirmed_email" varchar)[0m
+  [1m[35m (11.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime, "remember_created_at" datetime, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, "name" varchar, "confirmed_at" datetime, "confirmation_token" varchar, "confirmation_sent_at" datetime, "unconfirmed_email" varchar)[0m
+  [1m[35m (10.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (14.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (12.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (13.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (19.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (20.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (20.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (13.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227203642)[0m
+  [1m[35m (21.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (15.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227203642)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (16.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227203642)[0m
+  [1m[35m (17.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012),
+(20200227190619),
+(20200227202440);
+
+[0m
+  [1m[35m (11.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012),
+(20200227190619),
+(20200227202440);
+
+[0m
+  [1m[35m (13.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20200227203642)[0m
+  [1m[35m (9.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012),
+(20200227190619),
+(20200227202440);
+
+[0m
+  [1m[35m (13.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (11.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20191225202834),
+(20191226133423),
+(20191227135621),
+(20200104212710),
+(20200114220304),
+(20200116154239),
+(20200116203450),
+(20200222220737),
+(20200222221142),
+(20200222223726),
+(20200222223800),
+(20200226102758),
+(20200227174238),
+(20200227184156),
+(20200227190012),
+(20200227190619),
+(20200227202440);
+
+[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 20:40:14.087065"], ["updated_at", "2020-02-27 20:40:14.087065"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 20:40:14.088489"], ["updated_at", "2020-02-27 20:40:14.088489"]]
+  [1m[35m (18.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (8.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 20:40:14.102153"], ["updated_at", "2020-02-27 20:40:14.102153"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (15.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e587161f9ef3aa6434fcbd436bbb0230f8a6f173"], ["created_at", "2020-02-27 20:40:14.104234"], ["updated_at", "2020-02-27 20:40:14.104234"]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (7.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (24.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e587161f9ef3aa6434fcbd436bbb0230f8a6f173"], ["created_at", "2020-02-27 20:40:14.118475"], ["updated_at", "2020-02-27 20:40:14.118475"]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "test"], ["created_at", "2020-02-27 20:40:14.115265"], ["updated_at", "2020-02-27 20:40:14.115265"]]
+  [1m[35m (24.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (17.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e587161f9ef3aa6434fcbd436bbb0230f8a6f173"], ["created_at", "2020-02-27 20:40:14.135567"], ["updated_at", "2020-02-27 20:40:14.135567"]]
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.6ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:40:14.129408', '2020-02-27 20:40:14.129408');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:40:14.129408', '2020-02-27 20:40:14.129408');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:40:14.133978', '2020-02-27 20:40:14.133978');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:40:14.133978', '2020-02-27 20:40:14.133978')[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (21.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (9.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "schema_sha1"], ["value", "e587161f9ef3aa6434fcbd436bbb0230f8a6f173"], ["created_at", "2020-02-27 20:40:14.148170"], ["updated_at", "2020-02-27 20:40:14.148170"]]
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------
+ProductsControllerTest: test_should_destroy_product
+---------------------------------------------------
+  [1m[35m (15.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:40:14.151792', '2020-02-27 20:40:14.151792');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:40:14.151792', '2020-02-27 20:40:14.151792');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:40:14.154467', '2020-02-27 20:40:14.154467');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:40:14.154467', '2020-02-27 20:40:14.154467')[0m
+  [1m[35m (14.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (7.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------
+ProductsControllerTest: test_should_show_product
+------------------------------------------------
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.3ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:40:14.170002', '2020-02-27 20:40:14.170002');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:40:14.170002', '2020-02-27 20:40:14.170002');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:40:14.172868', '2020-02-27 20:40:14.172868');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:40:14.172868', '2020-02-27 20:40:14.172868')[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.4ms)[0m  [1m[31mDELETE FROM "orders";
+DELETE FROM "users";
+DELETE FROM "products";
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (980190962, '2020-02-27 20:40:14.187249', '2020-02-27 20:40:14.187249');
+INSERT INTO "orders" ("id", "created_at", "updated_at") VALUES (298486374, '2020-02-27 20:40:14.187249', '2020-02-27 20:40:14.187249');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (980190962, 'MyText', 'MyString', '2020-02-27 20:40:14.189362', '2020-02-27 20:40:14.189362');
+INSERT INTO "products" ("id", "description", "name", "created_at", "updated_at") VALUES (298486374, 'MyText', 'MyString', '2020-02-27 20:40:14.189362', '2020-02-27 20:40:14.189362')[0m
+  [1m[35m (9.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------
+ProductsControllerTest: test_should_get_index
+---------------------------------------------
+  [1m[35m (17.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+ProductsControllerTest: test_should_get_edit
+--------------------------------------------
+Started DELETE "/products/980190962" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Started GET "/products/980190962" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Processing by ProductsController#show as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Processing by ProductsController#destroy as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/show.html.erb within layouts/application
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendered products/show.html.erb within layouts/application (Duration: 1.4ms | Allocations: 421)
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Destroy (0.3ms)[0m  [1m[31mDELETE FROM "products" WHERE "products"."id" = ?[0m  [["id", 980190962]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products
+Completed 302 Found in 9ms (ActiveRecord: 0.7ms | Allocations: 829)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (3.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_update_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started PATCH "/products/980190962" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Processing by ProductsController#update as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}, "id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Redirected to http://www.example.com/products/980190962
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 668)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (2.9ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+ProductsControllerTest: test_should_create_product
+--------------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+Started POST "/products" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Processing by ProductsController#create as HTML
+  Parameters: {"product"=>{"description"=>"MyText", "name"=>"MyString"}}
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mProduct Create (0.5ms)[0m  [1m[32mINSERT INTO "products" ("description", "name", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "MyText"], ["name", "MyString"], ["created_at", "2020-02-27 20:40:14.313033"], ["updated_at", "2020-02-27 20:40:14.313033"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/products/980190963
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 707)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "products"[0m
+  [1m[36mProduct Load (0.3ms)[0m  [1m[34mSELECT "products".* FROM "products" ORDER BY "products"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------
+ProductsControllerTest: test_should_get_new
+-------------------------------------------
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+Started GET "/products/new" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Processing by ProductsController#new as HTML
+  Rendering products/new.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 10.3ms | Allocations: 3192)
+  Rendered products/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 3648)
+Started GET "/products/980190962/edit" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Started GET "/products" for 127.0.0.1 at 2020-02-27 21:40:14 +0100
+Processing by ProductsController#edit as HTML
+  Parameters: {"id"=>"980190962"}
+  [1m[36mProduct Load (0.1ms)[0m  [1m[34mSELECT "products".* FROM "products" WHERE "products"."id" = ? LIMIT ?[0m  [["id", 980190962], ["LIMIT", 1]]
+  Rendering products/edit.html.erb within layouts/application
+  Rendered products/_form.html.erb (Duration: 9.1ms | Allocations: 3302)
+  Rendered products/edit.html.erb within layouts/application (Duration: 10.7ms | Allocations: 3812)
+Processing by ProductsController#index as HTML
+  Rendering products/index.html.erb within layouts/application
+  [1m[36mProduct Load (0.2ms)[0m  [1m[34mSELECT "products".* FROM "products"[0m
+  Rendered products/index.html.erb within layouts/application (Duration: 3.0ms | Allocations: 893)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 136)
+Completed 200 OK in 1758ms (Views: 1756.3ms | ActiveRecord: 0.0ms | Allocations: 1276000)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------
+OpinionControllerTest: test_should_get_index
+--------------------------------------------
+Started GET "/opinions" for 127.0.0.1 at 2020-02-27 21:40:16 +0100
+Processing by OpinionsController#index as HTML
+  Rendering opinions/index.html.erb within layouts/application
+  [1m[36mOpinion Load (0.2ms)[0m  [1m[34mSELECT "opinions".* FROM "opinions" ORDER BY opinions.created_at desc[0m
+  Rendered opinions/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 708)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms | Allocations: 10207)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------
+OpinionControllerTest: test_should_get_new
+------------------------------------------
+Started GET "/opinions/new" for 127.0.0.1 at 2020-02-27 21:40:16 +0100
+Processing by OpinionsController#new as HTML
+  Rendering opinions/new.html.erb within layouts/application
+  Rendered opinions/_form.html.erb (Duration: 2.1ms | Allocations: 874)
+  Rendered opinions/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1170)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 22ms (Views: 15.2ms | ActiveRecord: 0.3ms | Allocations: 13110)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_home
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:40:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 9.7ms | Allocations: 3275)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 196)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 26ms (Views: 24.6ms | ActiveRecord: 0.0ms | Allocations: 12174)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------
+StaticPagesControllerTest: test_should_get_contact
+--------------------------------------------------
+Started GET "/contact" for 127.0.0.1 at 2020-02-27 21:40:16 +0100
+Processing by StaticPagesController#contact as HTML
+  Rendering static_pages/contact.html.erb within layouts/application
+  Rendered static_pages/contact.html.erb within layouts/application (Duration: 0.4ms | Allocations: 136)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 216)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 23)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.0ms | Allocations: 8633)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------
+StaticPagesControllerTest: test_should_get_root
+-----------------------------------------------
+Started GET "/" for 127.0.0.1 at 2020-02-27 21:40:16 +0100
+Processing by StaticPagesController#home as HTML
+  Rendering static_pages/home.html.erb within layouts/application
+  Rendered static_pages/home.html.erb within layouts/application (Duration: 3.8ms | Allocations: 2403)
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.0ms | Allocations: 6)
+  Rendered layouts/_header.html.erb (Duration: 0.5ms | Allocations: 189)
+  Rendered layouts/_footer.html.erb (Duration: 0.0ms | Allocations: 5)
+  Rendered layouts/_alerts.html.erb (Duration: 0.1ms | Allocations: 21)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.0ms | Allocations: 10611)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 3.6ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.2ms | Allocations: 126)
+Completed 200 OK in 1882ms (Views: 1864.7ms | ActiveRecord: 0.2ms | Allocations: 1273358)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 95)
+  Rendered layouts/_header.html.erb (Duration: 3.8ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.2ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 126)
+Completed 200 OK in 2159ms (Views: 2147.0ms | ActiveRecord: 0.2ms | Allocations: 1273091)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+[Webpacker] Everything's up-to-date. Nothing to do
+  Rendered layouts/_shim.html.erb (Duration: 0.3ms | Allocations: 94)
+  Rendered layouts/_header.html.erb (Duration: 3.7ms | Allocations: 499)
+  Rendered layouts/_footer.html.erb (Duration: 0.3ms | Allocations: 89)
+  Rendered layouts/_alerts.html.erb (Duration: 0.3ms | Allocations: 139)
+Completed 200 OK in 2114ms (Views: 2105.7ms | ActiveRecord: 0.1ms | Allocations: 1276486)
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
