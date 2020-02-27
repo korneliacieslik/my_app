@@ -8,7 +8,7 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
-  # config.secret_key = 'abaabf3be95fdf7866fee8a8d0ccd005434f61de57d1b53f5c68952a93cb901fac28fd7926f190543de50b8410eeb6baef20bdc023fbb627650cc6c1d0be836d'
+    config.secret_key = 'abaabf3be95fdf7866fee8a8d0ccd005434f61de57d1b53f5c68952a93cb901fac28fd7926f190543de50b8410eeb6baef20bdc023fbb627650cc6c1d0be836d'
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -131,7 +131,7 @@ Devise.setup do |config|
   # without confirming their account.
   # Default is 0.days, meaning the user cannot access the website without
   # confirming their account.
-  # config.allow_unconfirmed_access_for = 2.days
+    config.allow_unconfirmed_access_for = 7.days
 
   # A period that the user is allowed to confirm their account before their
   # token becomes invalid. For example, if set to 3.days, the user can confirm
