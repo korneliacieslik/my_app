@@ -8,9 +8,6 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-    <!--
-    The effect of this line is to look for a file called app/views/layouts/_shim.html.erb, evaluate its contents, and insert the results into the view.
-    -->
     <%= render 'layouts/shim' %>
     
   </head>
@@ -21,6 +18,7 @@
     <div class="container">
       <%= yield %>
       <%= render 'layouts/footer' %>
+      <%= render 'layouts/alerts' %>
       <%= debug(params) if Rails.env.development? %>
     </div>
   </body>

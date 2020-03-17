@@ -1,10 +1,24 @@
     <header>
+      
       <div class="cointainer">
+        
         <div class="btn-group">
+          
           <button type="button", class="nav-button btn-link"><%= link_to "Home", root_path %></button>
           <button type="button", class="nav-button btn-link"><%= link_to "Contact", contact_path %></button>
           <button type="button", class="nav-button btn-link"><%= link_to "Opinions", opinions_path %></button>
-          <button type="button", class="nav-button btn-link"><%= link_to "Your account", signup_path %></button>
+          <button type="button", class="nav-button btn-link">
+            <% if user_signed_in? %>
+              <%= link_to "Edit profile", edit_user_registration_path %> |
+              <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+            <% else %>    
+              <%= link_to "Sign up", new_user_registration_path %> |
+              <%= link_to "Login", new_user_session_path %> 
+            <% end %>
+          </button>
+        
         </div>  
+      
       </div>
+    
     </header>
