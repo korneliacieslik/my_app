@@ -64,3 +64,4 @@ gem 'rename'
 gem 'pry'
 
 gem 'devise'
+gem 'omniauth-facebook'
