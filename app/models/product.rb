@@ -1,5 +1,13 @@
 class Product < ApplicationRecord
+  before_destroy  :not_referenced_by_any_line_item 
+  has_many :line_items
 	
-	#One insance of Product belongs to many instance of Order.
-	
+  private
+  def not_referenced_by_any_line_item
+    unless line_items.empty?
+      errors.add(:base, "Line items present")
+      throw :abort
+    end
+  end
+
 end

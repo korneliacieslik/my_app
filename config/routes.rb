@@ -1,5 +1,7 @@
 Rails.application.routes.draw do 
   
+  resources :line_items
+  resources :carts
   devise_for :users, controllers: { registrations: 'users/registrations',  omniauth_callbacks: 'users/omniauth_callbacks'  }
   
   # devise_scope :user do

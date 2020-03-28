@@ -7,7 +7,8 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: %i[facebook]
 
 
-  has_many :products, through: :order
+  #has_many :products, through: :order
+  has_many :products
   has_many :orders
   has_one  :opinion
 
