@@ -121,4 +121,8 @@ Rails.application.configure do
     enable_starttls_auto: true
   }
 
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.perform_caching = true
+  config.action_mailer.perform_deliveries = true
+
 end
