@@ -109,22 +109,33 @@ Rails.application.configure do
   # config.active_record.database_selector = { delay: 2.seconds }
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
-  # config.action_mailer.default_url_options = { host: 'https://healthybowl.herokuapp.com', port: 80 }
-   config.action_mailer.default_url_options = { host: 'https://healthybowl.herokuapp.com'}
-  config.action_mailer.smtp_settings = {
-    user_name:      ENV["SENDMAIL_USERNAME"],
-    password:       ENV["SENDMAIL_PASSWORD"],
-    # domain:        "gmail.com",
-    domian:        "heroku.com",
-    address:       "smtp.gmail.com",
-    port:          "587",
-    authentication: :plain,
-    enable_starttls_auto: true
-  }
+  config.action_mailer.default_url_options = { host: 'https://healthybowl.herokuapp.com', port: 80 }
+  #  config.action_mailer.default_url_options = { host: 'https://healthybowl.herokuapp.com'}
+  # config.action_mailer.smtp_settings = {
+  #   user_name:      ENV["SENDMAIL_USERNAME"],
+  #   password:       ENV["SENDMAIL_PASSWORD"],
+  #   # domain:        "gmail.com",
+  #   domian:        "heroku.com",
+  #   address:       "smtp.gmail.com",
+  #   port:          "587",
+  #   authentication: :plain,
+  #   enable_starttls_auto: true
+  # }
 
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_caching = true
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.perform_caching = true
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.delivery_method = :smtp
 
 end
+
+ActionMailer::Base.delivery_method = :smtp
+ActionMailer::Base.smtp_settings = {
+  :address              =>  'smtp.sendgrid.net',
+  :port                 =>  '587',
+  :authentication       =>  :plain,
+  :user_name            =>  'app151905089@heroku.com',
+  :password             =>  '7htnuju80814',
+  :domain               =>  'heroku.com',
+  :enable_starttls_auto  =>  true
+}

@@ -52,8 +52,8 @@ group :test do
 end
 
 group :production do 
-  # Adds pg gem to allow Rails to talk to PostgreSQL db used by Heroku. 
   gem 'pg', '1.1.4'
+  gem 'rails_12factor'
 end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
@@ -65,3 +65,4 @@ gem 'pry'
 
 gem 'devise'
 gem 'omniauth-facebook'
+
