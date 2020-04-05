@@ -66,4 +66,3 @@ gem 'rename'
 
 gem 'devise'
 gem 'omniauth-facebook'
-
