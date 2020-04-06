@@ -2,6 +2,8 @@ class Product < ApplicationRecord
   
   before_destroy  :not_referenced_by_any_line_item 
   has_many :line_items
+  has_one_attached :photo
+
 
   private
   def not_referenced_by_any_line_item

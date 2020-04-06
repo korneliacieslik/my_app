@@ -1,4 +1,9 @@
 <p id="notice"><%= notice %></p>
+<%= link_to 'Keep Ordering', products_path %>
+<br>
+<br>
+<%= render(@cart.line_items) %>
 
+<br>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>

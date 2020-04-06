@@ -4,6 +4,7 @@
 <table>
     <thead>
       <tr>
+        <th>Photo</th>
         <th>Description</th>
         <th>Name</th>
         <th colspan="3"></th>
@@ -11,6 +12,11 @@
       <tbody>
         <% @products.each do |product| %>
           <tr>
+            <td>
+               <% if product.photo.attached? %>
+                <%= image_tag(product.photo, width: "300") %>
+              <% end %>
+            </td>
             <td><%= product.description %></td>
             <td><%= product.name %></td>
             <td><%= link_to 'Show', product %></td>
