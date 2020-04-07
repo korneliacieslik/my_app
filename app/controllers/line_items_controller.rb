@@ -1,6 +1,5 @@
 class LineItemsController < ApplicationController
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
-  before_action :set_cart, only: [:create]
 
   # GET /line_items
   # GET /line_items.json
@@ -25,6 +24,7 @@ class LineItemsController < ApplicationController
   # POST /line_items
   # POST /line_items.json
   def create
+    @cart = Cart.find_or_create_by(session[:cart_id])
     product = Product.find(params[:product_id])
     @line_item = @cart.add_product(product)
 
@@ -74,12 +74,5 @@ class LineItemsController < ApplicationController
     def line_item_params
       params.require(:line_item).permit(:product_id)
     end
-
-    def set_cart
-      @cart = Cart.find(session[:cart_id])
-      rescue ActiveRecord::RecordNotFound 
-      @cart = Cart.create 
-      session[:cart_id] = @cart.id
-    end 
 
 end
