@@ -2,13 +2,13 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @line_item.product_id %>
 </p>
 
 <p>
-  <strong>Cart:</strong>
-  <%= @line_item.cart_id %>
+  <% session[:cart].each do |product| %>
+      <%= puts  product %> 
+  <% end %> 
 </p>
 
-<%= link_to 'Edit', edit_line_item_path(@line_item) %> |
-<%= link_to 'Back', line_items_path %>
+<%= link_to 'Edit'  %> |
+<%= link_to 'Back', products_path %>
