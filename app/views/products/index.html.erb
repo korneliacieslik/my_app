@@ -13,15 +13,18 @@
         <% @products.each do |product| %>
           <tr>
             <td>
-               <% if product.photo.attached? %>
+              <% if product.photo.attached? %>
                 <%= image_tag(product.photo, width: "300") %>
               <% end %>
             </td>
             <td><%= product.description %></td>
             <td><%= product.name %></td>
             <td><%= link_to 'Show', product %></td>
+            <td><%= button_to'Add to cart', line_items_path(product_id: product)%></td>
           </tr>
         <% end %>
       </tbody>
     </thead>
   </table>
+
+  

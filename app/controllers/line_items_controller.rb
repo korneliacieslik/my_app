@@ -1,8 +1,7 @@
 class LineItemsController < ApplicationController
  
   def create
-   product = Product.find(params[:product_id])
-  
+   product = Product.find(params[:product_id])  
    session[:cart] ||= [] 
    session[:cart] << product.name
 
