@@ -4,11 +4,7 @@ Rails.application.routes.draw do
   resources :carts
   devise_for :users, controllers: { registrations: 'users/registrations',  omniauth_callbacks: 'users/omniauth_callbacks'  }
   
-  # devise_scope :user do
-  #  delete 'sign_out', :to => 'devise/sessions#destroy', :as => :destroy_user_session
-  # end
-  
-  resources  :opinions, :orders, :products
+  resources  :opinions, :orders, :products 
 
   root 'static_pages#home'
   
