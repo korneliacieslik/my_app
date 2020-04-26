@@ -1,3 +1,0 @@
-class LineItem < ApplicationRecord
-
-end

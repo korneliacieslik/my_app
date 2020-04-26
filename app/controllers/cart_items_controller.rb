@@ -1,4 +1,4 @@
-class LineItemsController < ApplicationController
+class CartItemsController < ApplicationController
  
   def create
    product = Product.find(params[:product_id])  
@@ -7,7 +7,7 @@ class LineItemsController < ApplicationController
 
     respond_to do |format| 
       if session[:cart].include? product.name
-        format.html { redirect_to line_items_path, notice: "Product added to cart." }
+        format.html { redirect_to cart_items_path, notice: "Product added to cart." }
       else
         format.html { render :new }
       end

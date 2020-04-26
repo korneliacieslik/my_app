@@ -1,10 +1,9 @@
 Rails.application.routes.draw do 
   
-  resources :line_items
-  resources :carts
+  resources :cart_items
   devise_for :users, controllers: { registrations: 'users/registrations',  omniauth_callbacks: 'users/omniauth_callbacks'  }
   
-  resources  :opinions, :orders, :products 
+  resources  :opinions, :products 
 
   root 'static_pages#home'
   

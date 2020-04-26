@@ -12,8 +12,10 @@
 		  	  <% @product.each do |product| %>
 		    	<div class="col-sm-3">
 			  	  <%= link_to "products/#{product.id}" do %>
-			  	  <%= image_tag(product.photo, alt:"photo_1", width: "300") %>
-			  	  <% end %>
+			  	  	<% if product.photo.attached? %>
+			  	  		<%= image_tag(product.photo, alt:"photo_1", width: "300") %>
+			  	  	<% end %>
+			  	  <% end %> 
 			  	  <p>The photo copied from afterfir-catering.pl </p>
 				</div>
 			  <%end %> 
