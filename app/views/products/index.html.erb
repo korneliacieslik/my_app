@@ -20,7 +20,8 @@
             <td><%= product.description %></td>
             <td><%= product.name %></td>
             <td><%= link_to 'Show', product %></td>
-            <td><%= button_to'Add to cart', line_items_path(product_id: product)%></td>
+            <td><%= button_to'Add to cart', cart_items_path(product_id: product)%>
+            </td>
           </tr>
         <% end %>
       </tbody>
