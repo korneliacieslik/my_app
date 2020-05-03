@@ -7,17 +7,17 @@
           <button type="button", class="nav-button btn-link"><%= link_to "Home", root_path %></button>
           <button type="button", class="nav-button btn-link"><%= link_to "Contact", contact_path %></button>
           <button type="button", class="nav-button btn-link"><%= link_to "Opinions", opinions_path %></button>
-          <button type="button", class="nav-button btn-link">
+          <button type="button", class="nav-button btn-link"><%= link_to "Shopping cart (#{!session[:cart].nil? ? session[:cart].count : 0 })", cart_items_path %></button>
             <% if user_signed_in? %>
               <%= link_to "Edit profile", edit_user_registration_path %> |
               <%= link_to "Logout", destroy_user_session_path, method: :delete %>
             <% else %>    
-              <%= link_to "Sign up", new_user_registration_path %> |
-              <%= link_to "Login", new_user_session_path %> |
-              <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
-            <% end %>
+          <button type="button", class="nav-button btn-link">
+                <%= link_to "Sign up", new_user_registration_path %> |
+                <%= link_to "Login", new_user_session_path %> |
+                <%= link_to "Sign in with Facebook", user_facebook_omniauth_authorize_path %>
           </button>
-        
+            <% end %>      
         </div>  
       
       </div>
