@@ -15,33 +15,34 @@ RSpec.describe OpinionsController, type: :controller do
       end
     end
     context "with logged user" do
-      login_user
-      it "creates opinion" do
+     login_user
+     it "creates opinion" do
       # This one will be failing without login
-        expect { perform }.to change(Opinion, :count).by(1)
-      end
+      expect { perform }.to change(Opinion, :count).by(1)
+     end
     end
   end 
   describe "DElETE /opinion" do
     create_opinion
-    context "without logged user" do
-      it "fails to delete opinion" do 
+    context "withou logged user" do 
+      it "fails to delete opinion" do  
         expect {delete_opinion}.to change(Opinion, :count).by(0)
-      end 
+      end
     end 
     context "with logged user" do 
       login_user
-      it "delete opinion" do 
-        expect{delete_opinion}.to change(Opinion, :count).by(-1)
+      it "delete_opinion" do 
+        expect {delete_opinion}.to change(Opinion, :count).by(-1) 
       end
-    end
+    end 
   end 
 
     def perform
      post :create, :params => {opinion: {content: "test"}}
     end
 
-    def delete_opinion
-     delete :destroy, :params => {opinion: {id: }}
+     def delete_opinion
+      opinion = Opinion.find_by(id: opinion.id)
+      opinion.destroy
     end
-end
+end 

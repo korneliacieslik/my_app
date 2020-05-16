@@ -8,6 +8,7 @@ FactoryBot.define do
   end 
   factory :opinion do
     content {"Test"}
+    association :user
   end
 end 
 

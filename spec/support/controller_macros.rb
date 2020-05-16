@@ -7,8 +7,7 @@ module ControllerMacros
       sign_in user
     end
   end
-
   def create_opinion
-    opinion = FactoryBot.build(:opinion)
+    opinion = FactoryBot.create(:opinion)
   end 
 end
