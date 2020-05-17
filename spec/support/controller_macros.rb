@@ -8,6 +8,6 @@ module ControllerMacros
     end
   end
   def create_opinion
-    opinion = FactoryBot.create(:opinion)
+    opinion = FactoryBot.create(:opinion, user: user)
   end 
 end

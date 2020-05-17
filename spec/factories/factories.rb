@@ -4,11 +4,12 @@ FactoryBot.define do
   factory :user do 
     password {"123456"}
     password_confirmation {"123456"}
-    email { Faker::Internet.email } 
+    email { Faker::Internet.email }
+    name {"Kornelia"} 
   end 
   factory :opinion do
-    content {"Test"}
-    association :user
-  end
+  content {"Test"}
+  user
+  end 
 end 
 
