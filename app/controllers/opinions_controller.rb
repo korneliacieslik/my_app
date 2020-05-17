@@ -1,19 +1,14 @@
-class OpinionsController < ApplicationController
-  
-  def index
-    
+class OpinionsController < ApplicationController 
+  skip_before_action :authenticate_user!, only: [:index, :show], raise: false
+  def index 
     @opinions = Opinion.all.order("opinions.created_at desc")
-  
   end
 
   def new
-
     @opinion = Opinion.new
-  
   end
 
-  def create
-    
+  def create   
     @opinion = Opinion.new(opinion_params)
     @opinion.user = current_user
     
@@ -84,23 +79,15 @@ class OpinionsController < ApplicationController
   end
 
   def show 
-    
     @opinion = Opinion.find(params[:id])
-  
   end 
 
   private
-
     def set_opinion
-
       @opinion = Opinion.find(params[:id])
-
     end 
 
     def opinion_params
-      
       params.require(:opinion).permit(:content)
-    
     end 
-
 end

@@ -22,51 +22,62 @@ RSpec.describe OpinionsController, type: :controller do
      end
     end
   end 
-  describe "DElETE /opinion" do
-    create_opinion
-    context "without logged user" do 
+  describe "DElETE /opinion" do 
+    context "without logged user" do
+      let!(:opinion) { create(:opinion) } 
       it "fails to delete opinion" do  
-        expect {delete_opinion}.to change(Opinion, :count).by(0)
+        expect {delete :destroy, params: {id: opinion.id} }.to change(Opinion, :count).by(0)
       end
     end 
     context "with logged user" do 
+      let!(:opinion) { create(:opinion) } 
       login_user
       it "deletes opinion" do 
-        expect {delete_opinion}.to change(Opinion, :count).by(-1) 
+        expect {delete :destroy, params: {id: opinion.id} }.to change(Opinion, :count).by(-1) 
       end
     end 
   end 
   describe "PUT /opinion" do 
     context "without logged user" do 
-      it "fails to update opinion" do 
-      expect { update }.to raise_error
+      
+      let!(:opinion) { create(:opinion) }
+      
+      let!(:updated_opinion) do
+       { content: "updated content" }
+      end 
+      
+      before(:each) do
+       put :update, params: { opinion: {content: updated_opinion.content, id: opinion.id } }
+       opinion.reload
+      end
+      
+       it "fails to update opinion" do 
+       expect(opinion.content).to eql updated_opinion.content 
       end
     end
     context "with logged user" do  
+      let!(:opinion) { create(:opinion) }
+
+      let!(:updated_opinion) do
+       { content: "updated content" }
+      end 
+      
+      before(:each) do
+        put :update, params: { opinion: {content: updated_opinion.content, id: opinion.id } }
+        opinion.reload
+      end
+
       login_user
-      it " updates opinon" do 
-        if(opinion.user == current_user)
-          update
-          expect { opinion.content }.to equal("new content")
-        elsif (opinion.user != current_user)
-          expect { update }.to raise_error
-        end 
-      end            
-    end
+      
+      it "updates opinion" do
+        expect(opinion.content).to eql updated_opinion.content 
+      end 
+    end 
   end  
+
+
 
     def perform
      post :create, :params => {opinion: {content: "test"}}
-    end
-
-     def delete_opinion
-      opinion = Opinion.find_by(id: opinion.id)
-      opinion.destroy
-    end
-
-    def update
-      opinion = Opinion.find_by(id: opinion.id)
-      put :update, :params => {opinion: {content: "new content"}}
-      opinion.reload 
     end
 end 
