@@ -24,18 +24,36 @@ RSpec.describe OpinionsController, type: :controller do
   end 
   describe "DElETE /opinion" do
     create_opinion
-    context "withou logged user" do 
+    context "without logged user" do 
       it "fails to delete opinion" do  
         expect {delete_opinion}.to change(Opinion, :count).by(0)
       end
     end 
     context "with logged user" do 
       login_user
-      it "delete_opinion" do 
+      it "deletes opinion" do 
         expect {delete_opinion}.to change(Opinion, :count).by(-1) 
       end
     end 
   end 
+  describe "PUT /opinion" do 
+    context "without logged user" do 
+      it "fails to update opinion" do 
+      expect { update }.to raise_error
+      end
+    end
+    context "with logged user" do  
+      login_user
+      it " updates opinon" do 
+        if(opinion.user == current_user)
+          update
+          expect { opinion.content }.to equal("new content")
+        elsif (opinion.user != current_user)
+          expect { update }.to raise_error
+        end 
+      end            
+    end
+  end  
 
     def perform
      post :create, :params => {opinion: {content: "test"}}
@@ -44,5 +62,11 @@ RSpec.describe OpinionsController, type: :controller do
      def delete_opinion
       opinion = Opinion.find_by(id: opinion.id)
       opinion.destroy
+    end
+
+    def update
+      opinion = Opinion.find_by(id: opinion.id)
+      put :update, :params => {opinion: {content: "new content"}}
+      opinion.reload 
     end
 end 
