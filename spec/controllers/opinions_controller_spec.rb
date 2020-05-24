@@ -37,42 +37,16 @@ RSpec.describe OpinionsController, type: :controller do
       end
     end 
   end 
-  describe "PUT /opinion" do 
-    context "without logged user" do 
-      
-      let!(:opinion) { create(:opinion) }
-      
-      let!(:updated_opinion) do
-       { content: "updated content" }
-      end 
-      
-      before(:each) do
-       put :update, params: { opinion: {content: updated_opinion.content, id: opinion.id } }
-       opinion.reload
-      end
-      
-       it "fails to update opinion" do 
-       expect(opinion.content).to eql updated_opinion.content 
-      end
-    end
-    context "with logged user" do  
-      let!(:opinion) { create(:opinion) }
+  describe "PUT /opinion" do
+      let!(:opinion) { create(:opinion)}
+      let(:updated_opinion){content:'updated content'}
 
-      let!(:updated_opinion) do
-       { content: "updated content" }
-      end 
-      
       before(:each) do
-        put :update, params: { opinion: {content: updated_opinion.content, id: opinion.id } }
+        put :update, id: opinion.id, opinion: updated_opinion
         opinion.reload
-      end
-
-      login_user
-      
-      it "updates opinion" do
-        expect(opinion.content).to eql updated_opinion.content 
       end 
-    end 
+
+      it { expect(@opinion.content).to eql updated_opinion[:content]} 
   end  
 
 
