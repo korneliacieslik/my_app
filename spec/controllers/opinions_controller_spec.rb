@@ -18,13 +18,13 @@ RSpec.describe OpinionsController, type: :controller do
      login_user
      it "creates opinion" do
       # This one will be failing without login
-      expect { perform }.to change(Opinion, :count).by(1)
+      expect{perform}.to change(Opinion, :count).by(1)
      end
     end
   end 
   describe "DElETE /opinion" do 
     context "without logged user" do
-      let!(:opinion) { create(:opinion) } 
+      let!(:opinion) { create(:opinion) }
       it "fails to delete opinion" do  
         expect {delete :destroy, params: {id: opinion.id} }.to change(Opinion, :count).by(0)
       end
@@ -37,21 +37,32 @@ RSpec.describe OpinionsController, type: :controller do
       end
     end 
   end 
-  describe "PUT /opinion" do
-      let!(:opinion) { create(:opinion)}
-      let(:updated_opinion){content:'updated content'}
-
-      before(:each) do
-        put :update, id: opinion.id, opinion: updated_opinion
-        opinion.reload
+  describe "PUT /opinion" do 
+    context "without logged user" do 
+      let!(:opinion) { create(:opinion) }
+      subject { put :update, params: { id: opinion.id } }
+      it "fails to update opinion" do 
+       expect(subject.status).to eql(422) 
+      end
+    end
+    context "with logged user" do  
+      let!(:opinion) { create(:opinion) }
+      let(:new_conentent) { "updated content" }
+      subject { put :update, params: { id: opinion.id, opinion: {content: new_conentent} } } 
+      login_user
+      
+      it "redirect to show updated opinion" do
+        expect(subject.status).to eql(302)  
       end 
-
-      it { expect(@opinion.content).to eql updated_opinion[:content]} 
+      it "updated content successfully" do 
+        subject #do subject at this moment 
+        opinion.reload
+        expect(opinion.content). to eq(new_conentent)
+      end 
+    end 
   end  
-
-
-
+ 
     def perform
      post :create, :params => {opinion: {content: "test"}}
     end
-end 
+end
